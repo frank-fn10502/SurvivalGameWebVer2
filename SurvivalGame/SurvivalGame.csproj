@@ -358,8 +358,10 @@
     <Content Include="Assets\javaScript\active.js" />
     <Content Include="Assets\javaScript\classy-nav.min.js" />
     <Content Include="Assets\javaScript\jquery-2.2.4.min.js" />
+    <Content Include="Assets\javaScript\MemberRegistered\main.js" />
     <Content Include="Assets\javaScript\plugins.js" />
     <Content Include="Assets\javaScript\popper.min.js" />
+    <Content Include="Assets\javaScript\ProductDetails\test.js" />
     <Content Include="Assets\javaScript\productMenu\ExteriorHelper.js" />
     <Content Include="Assets\javaScript\productMenu\shop.js" />
     <Content Include="Assets\javaScript\ShoppingCarts\ShoppingCart.js" />
