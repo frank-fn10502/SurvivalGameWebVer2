@@ -1,0 +1,63 @@
+.LoginArea {
+    text-align: center;
+}
+
+.Title{
+    margin: 20px 0;
+}
+
+.content {
+    border: rgb(46, 12, 85) 5px double;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.content * {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+label {
+    white-space: nowrap;
+}
+
+.Btn {
+    margin: 10px 0 0;
+}
+
+.Update {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.ForgetContent {
+    justify-content: space-between;
+    margin: auto;
+    font-size: 21px;
+    position: relative;
+}
+
+.modal-header {
+    background-color: #000;
+    color: #fff;
+}
+strong{
+    margin: 0 7px 0 -20px;
+}
+
+@media screen and (max-width: 767px) {
+    input {
+        text-align: center;
+    }
+
+    .col-2 {
+        max-width: 100%;
+    }
+}

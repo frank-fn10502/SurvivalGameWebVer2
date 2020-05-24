@@ -1,0 +1,190 @@
+﻿
+@{
+    ViewBag.Title = "購物車";
+}
+< <div class="container">
+    <div class="row my-5">
+        <div class="col-12 d-flex justify-content-center">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">商品照片</th>
+                        <th scope="col">商品名稱</th>
+                        <th scope="col">規格</th>
+                        <th scope="col">單價</th>
+                        <th scope="col">數量</th>
+                        <th scope="col">總計</th>
+                        <th scope="col">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://picsum.photos/100/100/?random=21"></td>
+                        <td>台灣製造 銀色 HFC 112 P8 6mm ABS 手拉空氣槍</td>
+                        <td>HA112S</td>
+                        <td></td>
+                        <td><select name="" id=""></select></td>
+                        <td></td>
+                        <td><a href=""><i class="fas fa-trash-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://picsum.photos/100/100/?random=21"></td>
+                        <td>台灣製造 銀色 HFC 112 P8 6mm ABS 手拉空氣槍</td>
+                        <td>HA112S</td>
+                        <td></td>
+                        <td><select name="" id=""></select></td>
+                        <td></td>
+                        <td><a href=""><i class="fas fa-trash-alt"></i></a></td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+                <tfoot>
+                <th colspan="5" class="text-right">總金額</th>
+                <td colspan="2"></td>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">運送方式</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option value="1">便利商店</option>
+                    <option value="2">郵局</option>
+                    <option value="3">宅配</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect02">付費方式</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect02">
+                    <option value="1">貨到付款</option>
+                    <option value="2">ATM繳費</option>
+                    <option value="3">信用卡</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-3 text-right Detail col-6 offset-lg-3">
+            <div class="row">
+                <div class="col-auto">商品總金額</div>
+                <div class="col">XXX元</div>
+            </div>
+            <div class="row">
+                <div class="col-auto">運費總金額</div>
+                <div class="col">XXX元</div>
+            </div>
+            <div class="row">
+                <div class="col-auto">總付款金額</div>
+                <div class="col">XXX元</div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-6 ">
+            <button type="button" class="btn btn-outline-secondary">回首頁</button>
+        </div>
+        <div class="col-6 text-right">
+            <button type="button" class="btn btn-outline-primary  d-none" id="Buy">購買</button>
+            <button type="button" class="btn btn-outline-danger ml-2" data-toggle="modal" data-target="#MemberLogin"
+                    id="SignIn">
+                登入
+            </button>
+        </div>
+
+
+    </div>
+</div>
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="MemberLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="MemberLoginLabel">會員登入</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <label for="">帳號：</label>
+                    <input type="text" id="LoginId" class="is-invalid">
+                    <div class="invalid-feedback LoginError">第一個字不為數字，只接受 大小寫字母、數字及底線</div>
+                </div>
+                <div class="mt-2">
+                    <label for="">密碼：</label>
+                    <input type="password" id="LoginPWD" required>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <div class="BtnGroup">
+                    <button type="button" class="btn btn-outline-primary mr-1" id="BtnLogin">登入</button>
+                    <button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                            data-target="#FogetPWD">
+                        忘記密碼
+                    </button>
+                </div>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="FogetPWD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="FogetPWDLabel">忘記密碼</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <label for=""><i class="fas fa-user forget-row-icon"></i></label>
+                    <input type="text" id="Id" placeholder=" 請輸入會員帳號" class="is-invalid">
+                    <div class="invalid-feedback MailId">第一個字不為數字，只接受 大小寫字母、數字及底線</div>
+                </div>
+                <div class="mt-2">
+                    <label for=""><i class=" fas fa-envelope"></i></label>
+                    <input type="text" id="Email" placeholder="請輸入電子郵件" required>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-primary" id="MailSend">送出</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section topCss{
+    <link href="~/Assets/css/ShoppingCart/ShoppingCart.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/95fe5e2d81.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            color: white;
+        }
+
+        input {
+            color: black;
+        }
+
+        #MemberLogin label {
+            color: black;
+        }
+
+        i {
+            color: black;
+        }
+    </style>
+}
+@section bottomJs
+{
+    <script src="~/Assets/javaScript/ShoppingCarts/smtp.js"></script>
+    <script src="~/Assets/javaScript/ShoppingCarts/ShoppingCart.js"></script>
+}

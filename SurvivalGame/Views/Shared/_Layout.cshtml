@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    @*<script src="https://kit.fontawesome.com/437be08d6c.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet">*@
+
+    <link rel="icon" href="~/Assets/images/core-img/favicon.ico">
+    @Styles.Render("~/Content/css")
+    @* 套版的css *@
+    <link href="~/Assets/css/animate.css" rel="stylesheet" />
+    <link href="~/Assets/css/classy-nav.min.css" rel="stylesheet" />
+
+    <link href="~/Assets/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="~/Assets/css/nice-select.css" rel="stylesheet" />
+    <link href="~/Assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Assets/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="~/Assets/css/core-style.css" rel="stylesheet" />
+    <link href="~/Assets/css/style.css" rel="stylesheet" />
+
+    @RenderSection("topCss" ,required: false)
+</head>
+<body class="p-0">
+    <!-- ##### Header Area Start ##### -->
+    <header class="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- Logo -->
+                <a class="nav-brand" href="index.html"><img src="~/Assets/images/core-img/logo.png" alt=""></a>
+                <!-- Navbar Toggler -->
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+                <!-- Menu -->
+                <div class="classy-menu">
+                    <!-- close btn -->
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+                    <!-- Nav Start -->
+                    <div class="classynav">
+                        <ul>
+                            <li>
+                                <a href="blog.html">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#">News</a>
+                                <ul class="dropdown">
+                                    <li><a href="">New</a></li>
+                                    <li><a href="">Hot</a></li>
+                                    <li><a href="">Sale</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Products</a>
+                                <ul class="dropdown">
+                                    <li><a href="">Guns</a></li>
+                                    <li><a href="">Clothes</a></li>
+                                    <li><a href="">Asscessor</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Nav End -->
+                </div>
+            </nav>
+
+            <!-- Header Meta Data -->
+            <div class="header-meta d-flex clearfix justify-content-end">
+                <!-- Search Area -->
+                <div class="search-area">
+                    <form action="#" method="post">
+                        <input type="search" name="search" id="headerSearch" placeholder="Type for search">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                <!-- Favourite Area -->
+                <div class="favourite-area">
+                    <a href="#"><img src="~/Assets/images/core-img/heart.svg" alt=""></a>
+                </div>
+                <!-- User Login Info -->
+                <div class="user-login-info">
+                    <a href="#"><img src="~/Assets/images/core-img/user.svg" alt=""></a>
+                </div>
+                <!-- Cart Area -->
+                <div class="cart-area">
+                    <a href="#" id="essenceCartBtn"><img src="~/Assets/images/core-img/bag.svg" alt=""> <span>3</span></a>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+    <!-- ##### Right Side Cart Area ##### -->
+    <div class="cart-bg-overlay"></div>
+
+    <div class="right-side-cart-area">
+
+        <!-- Cart Button -->
+        <div class="cart-button">
+            <a href="#" id="rightSideCart"><img src="~/Assets/images/core-img/bag.svg" alt=""> <span>3</span></a>
+        </div>
+
+        <div class="cart-content d-flex">
+
+            <!-- Cart List Area -->
+            <div class="cart-list">
+                <!-- Single Cart Item -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img src="~/Assets/images/product-img/product-1.jpg" class="cart-thumb" alt="">
+                        <!-- Cart Item Desc -->
+                        <div class="cart-item-desc">
+                            <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Single Cart Item -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img src="~/Assets/images/product-img/product-2.jpg" class="cart-thumb" alt="">
+                        <!-- Cart Item Desc -->
+                        <div class="cart-item-desc">
+                            <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Single Cart Item -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img src="~/Assets/images/product-img/product-3.jpg" class="cart-thumb" alt="">
+                        <!-- Cart Item Desc -->
+                        <div class="cart-item-desc">
+                            <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-amount-summary">
+
+                <h2>Summary</h2>
+                <ul class="summary-table">
+                    <li><span>subtotal:</span> <span>$274.00</span></li>
+                    <li><span>delivery:</span> <span>Free</span></li>
+                    <li><span>discount:</span> <span>-15%</span></li>
+                    <li><span>total:</span> <span>$232.00</span></li>
+                </ul>
+                <div class="checkout-btn mt-100">
+                    <a href="checkout.html" class="btn essence-btn">check out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Right Side Cart End ##### -->
+
+    @RenderBody()
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer_area clearfix">
+        <div class="container">
+            <div class="row">
+                <!-- Single Widget Area -->
+                <div class="col-4">
+                    <div class="single_widget_area d-flex mb-30 flex-wrap">
+                        <!-- Logo -->
+                        <div class="footer-logo mr-50">
+                            <a href="#"><img src="~/Assets/images/core-img/logo2.png" alt=""></a>
+                            <!-- Footer Menu -->
+                            <div class="footer_menu mt-3 p-0">
+                                <ul class="d-flex flex-column" style="line-height: 40px;">
+                                    <li>
+                                        <a href="">Shop</a>
+                                    </li>
+                                    <li><a href="">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Single Widget Area -->
+                <div class="col-4">
+                    <div class="single_widget_area mb-30">
+                        <p>Memeber</p>
+                        <ul class="footer_widget_menu d-flex flex-column">
+                            <li><a href="#">Sign up</a></li>
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">Order Status</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="single_widget_area mb-30">
+                        <p>Notice</p>
+                        <ul class="footer_widget_menu d-flex flex-column">
+                            <li><a href="#">Payment Options</a></li>
+                            <li><a href="#">Shipping and Delivery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="row align-items-end"> -->
+            <!-- Single Widget Area -->
+            <!-- <div class="col-12 col-md-6">
+                <div class="single_widget_area">
+                    <div class="footer_heading mb-30">
+                        <h6>Subscribe</h6>
+                    </div>
+                    <div class="subscribtion_form">
+                        <form action="#" method="post">
+                            <input type="email" name="mail" class="mail" placeholder="Your email here">
+                            <button type="submit" class="submit"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Single Widget Area -->
+            <!-- <div class="col-12 col-md-6">
+                    <div class="single_widget_area">
+                        <div class="footer_social_area">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                    <p> -->
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <!-- Copyright &copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <!-- </p>
+            </div>
+            </div>
+
+            </div> -->
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+    @*@Scripts.Render("~/bundles/jquery")*@
+    <script src="~/Assets/javaScript/jquery-2.2.4.min.js"></script>
+    @* 套版的JS *@
+    <script src="~/Assets/javaScript/popper.min.js"></script>
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @* 套版的JS *@
+    <script src="~/Assets/javaScript/plugins.js"></script>
+    <script src="~/Assets/javaScript/classy-nav.min.js"></script>
+    <script src="~/Assets/javaScript/active.js"></script>
+
+    @RenderSection("scripts" ,required: false)
+    @RenderSection("bottomJs" ,required: false)
+</body>
+</html>

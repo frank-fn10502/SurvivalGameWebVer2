@@ -1,0 +1,234 @@
+*{
+    color: #fff;
+}
+img{
+    width: 100%;
+}
+.ControlPanel{
+    height: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    select.ClassSelector{
+        background-color: transparent;
+        color: #fff;
+        margin-bottom: 30px;
+        option{
+            color: #000;
+        }
+    }
+    #Classification
+    {
+        margin: 0 -15px -10px;
+        height: 100%;
+        .btn{
+            margin: 5px;
+        }
+        .btn:focus{
+            box-shadow: none;
+        }
+        input{
+            margin-left: 5px;
+            display: none;
+        }
+        .card-header{
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 1px;
+        }
+        .Condition{
+            
+            // cursor: pointer;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            border: none;
+            label{
+               
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                margin: 0;
+            }
+            span{
+                color: #000;
+            }
+        }
+        input:checked ~ .Condition{
+            background-color: #555;
+            color: #fff;
+        }
+        .card{
+            background-color: transparent;
+            border-radius: none;
+            border: none;
+        }
+    }
+}
+.DisplayPanel
+{
+    .SearchCount{
+        display: flex;
+        justify-content: space-between;
+        .Total{
+            font-size: 30px;
+        }
+        .PageInfo{
+            color: #aaa;
+            font-size: 10px;
+            display: flex;
+            align-items: flex-end;
+        }
+        span{
+            margin: 0;
+            margin-top: 12px;
+            span{
+                font-weight: bold;
+            }
+        }
+
+    }
+    .OrderTypeGroup{
+        display: flex;
+        border: 1px solid #eee;
+        display: flex;
+        .OrderType{
+            color: #fff;
+            user-select: none;
+            padding: 5px 15px;
+            flex-grow: 1;
+            text-align: center;
+            cursor: pointer;
+            span{
+                color: #fff;
+            }
+        }
+        .OrderType + .OrderType{
+            border-left: 1px solid #eee;
+        }
+        .OrderType:last-child
+        {
+            border-right: 1px solid #eee;
+        }
+    }
+    .ProductGroup{
+        margin: 0 -5px;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        div[class *= "col"]{
+            padding: 5px;
+        }
+        .card 
+        {
+            max-height: 300px;
+            height: 100%;
+            cursor: pointer;
+            width: 100%;
+            padding: 0;
+            border: 1px solid #aaa;
+            .pic{
+                width: 100%;
+                padding-top: 80%;
+                position: relative;
+                .Frame{
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    .Item{
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            transition: .5s;
+                        }
+                    }
+                }
+
+            }
+            .card-body{
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                .ProductTitle{
+                    margin-bottom: auto;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 600;
+                    overflow: hidden;
+                }
+                .Price{
+                    margin: 10px 0;
+                    .CurrentPrice{
+                        font-size: 16px;
+                        color: #f00;
+                        font-weight: bold;
+                        margin-right: 5px;
+                    }
+                    .OriginPrice{
+                        font-size: 10px;
+                        color: #9b9b9b;
+                        text-decoration: line-through;
+                    }
+                }
+                .ButtonGroup{
+                    display: flex;
+                    justify-content: center;
+                    .btn{
+                        padding: 5px 10px;
+                        margin: 0 5px;
+                        transition: .2s;
+                    }
+                    .btn:hover{
+                        color: rgb(228, 222, 222);
+                    }
+                    .like{
+                        background-color: rgb(72, 72, 223);
+                        order: 1;
+                        // flex-grow: 1;
+                    }
+                    .like:hover{
+                        background-color: rgb(57, 57, 170);
+                    }
+                    .cart{
+                        background-color: #ff4949;
+                        flex-grow: 1;
+                    }
+                    .cart:hover{
+                        background-color: #e42a2a;
+                    }
+                }
+            }
+        }
+        .card:hover{
+            .pic{
+                .Item{
+                    img{
+                        width: 120%;
+                        height: 120%;
+                        transform: translate(-10%,-10%);
+                    }
+                }
+            }
+        }
+    
+    }
+    .page{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        ul{
+            margin: 0;
+        }
+    }
+}

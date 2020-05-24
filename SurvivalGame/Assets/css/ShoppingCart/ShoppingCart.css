@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.Detail div {
+    font-size: large;
+    border: 1px solid #eee;
+}
+
+.Detail .row:nth-child(even) {
+    border-bottom: 0px;
+    border-top: none;
+}
+
+.invalid-feedback {
+    text-indent: 4em;
+    margin-top: -0.2rem;
+}
+
+#FogetPWD .invalid-feedback {
+    text-indent: 1.5em;
+}

@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "商品明細";
+}
+
+<section class="single_product_details_area d-flex align-items-center">
+
+    <!-- Single Product Thumb -->
+    <div class="single_product_thumb clearfix" style="background-color:aqua">
+        <div class="product_thumbnail_slides owl-carousel">
+            <img src="https://sf-shop.tw/wp-content/uploads/WE-G19V-RMR%E7%89%88-%E7%93%A6%E6%96%AF%E6%89%8B%E6%A7%8D-2900.jpg"
+                 alt="">
+            <img src="https://sf-shop.tw/wp-content/uploads/WE-G19V-RMR%E7%89%88-%E7%93%A6%E6%96%AF%E6%89%8B%E6%A7%8D-%E9%BB%91%E8%89%B2-2900-10.jpg"
+                 alt="">
+            <img src="https://sf-shop.tw/wp-content/uploads/WE-G19V-RMR%E7%89%88-%E7%93%A6%E6%96%AF%E6%89%8B%E6%A7%8D-%E6%B2%99%E8%89%B2-2900.jpg"
+                 alt="">
+        </div>
+
+    </div>
+    <!-- Single Product Description -->
+    <div class="single_product_desc clearfix">
+        <span class="BadgeName">編號:A01</span>
+        <a href="cart.html">
+            <h2 id="ProductName">G19V Glock19V 瓦斯手槍</h2>
+        </a>
+        <p class="product-price">價格:<span>13,000</span></p>
+        <div class="product-desc">
+            <strong>產品規格:</strong>
+            <p>➤材質 : 金屬/塑膠</p>
+            <p>➤動力 : 瓦斯</p>
+            <p>➤彈容量 : 20發</p>
+            <p>➤初速 : 約90 m/s(0.2g BB彈)</p>
+            <p>➤長度 : 174 mm</p>
+            <p>➤重量 : 690 g</p>
+            <p>➤射擊模式 : 單發/保險</p>
+            <p>➤滑套可動，無彈後定</p>
+            <p>➤原廠槍均為一槍一彈匣</p>
+        </div>
+
+        <!-- Form -->
+        <form class="cart-form clearfix" method="post">
+            <!-- Select Box -->
+            <div class="select-box d-flex mt-50 mb-30">
+                <select name="select" id="ProductCount" class="mr-5">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <select name="select" id="ProductColor">
+                    <option value="1">黑色</option>
+                    <option value="2">沙色</option>
+                </select>
+            </div>
+            <!-- Cart & Favourite Box -->
+            <div class="cart-fav-box d-flex align-items-center">
+                <!-- Cart -->
+                <button type="button" name="addtocart" value="5" class="btn essence-btn">Add to cart</button>
+                <!-- Favourite -->
+                <div class="product-favourite ml-4">
+                    <a href="#" class="favme fa fa-heart"></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+@section topCss{
+
+    <link href="~/Assets/css/ProductDetails/ProductDetails.css" rel="stylesheet" />
+}
+@section bottomJs
+    {
+    <script src="~/Assets/javaScript/ProductDetails/test.js"></script>
+}
+
