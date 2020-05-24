@@ -85,8 +85,8 @@ let fakeSubClassData = [
 ]
 
 
-let catagoryA = null, subCatagory = null;
-
+let catagoryA = null, subCatagory = null, catagoryBtn = null;
+let firstPage = true;
 
 function initActivate() {
     var favme = $(".favme");
@@ -138,35 +138,78 @@ function initActivate() {
     });
 }
 
-function setEvent()
-{
-    catagoryA = this.document.querySelectorAll('#menu-content2 > li > a');
-    catagoryA.forEach(x => {
-        x.addEventListener('click', (e) => {
-            console.log("catagory top test");
-            catagoryA.forEach(x => {
-                if (x != e.currentTarget)
-                {
-                    console.log(x, x.parentElement.querySelector('ul'));
-                    
-                    $(`#${x.parentElement.querySelector('ul').id}`).collapse('hide');
-                    //x.classList.remove('activateA');
-                }
-            });
-            e.currentTarget.classList.add('activateA');
-        });
-    });
+function resetDisply(caID = undefined, clID = undefined) {
+    new Promise((resolve, reject) => {
+        $.ajax({
+            type: "GET",
+            url: "/Product/GetCatagoryItems",
+            dataType: "JSON",
+            data: { "CaId": caID, "clID": clID },
+            success: function (response) {
+                console.log(response);
+                fakeCategoryData = response.CatagoryList;
+                fakeProductData = response.ProductList;
+                fakeSubClassData = response.Attributes;
 
-    subCatagory = this.document.querySelectorAll('#menu-content2 ul a');
-    subCatagory.forEach(x => {
-        x.addEventListener('click', (e) => {
-            console.log("catagory test");
-            subCatagory.forEach(x => {
-                x.classList.remove('activateA');
-            });
-            e.currentTarget.classList.add('activateA');
+                resolve("get Data from sql server Donme!!!");
+            },
+            error: function (r) {
+
+            }
         });
+    }).then((e) => {
+        getRealData();
+        initActivate();
+        firstPage = false;
     });
+}
+function setEvent() {
+    if (firstPage) {
+        catagoryBtn = document.querySelector('.catagoryTitle .btn');
+        catagoryBtn.addEventListener('click', (e) => {
+            if (e.currentTarget.className.includes('unselect')) {
+                subCatagory.forEach(x => {
+                    x.classList.remove('activateA');
+                });
+                e.currentTarget.classList.remove('unselect');
+                resetDisply();
+            }
+            else
+                e.currentTarget.classList.add('unselect');
+        });
+
+        catagoryA = this.document.querySelectorAll('#menu-content2 > li > a');
+        catagoryA.forEach(x => {
+            x.addEventListener('click', (e) => {
+                console.log("catagory top test");
+                catagoryA.forEach(x => {
+                    if (x != e.currentTarget) {
+                        $(`#${x.parentElement.querySelector('ul').id}`).collapse('hide');
+                        //x.classList.remove('activateA');
+                    }
+                });
+                e.currentTarget.classList.add('activateA');
+            });
+        });
+
+        subCatagory = this.document.querySelectorAll('#menu-content2 ul a');
+        subCatagory.forEach(x => {
+            x.addEventListener('click', (e) => {
+                console.log("catagory test");
+                subCatagory.forEach(x => {
+                    x.classList.remove('activateA');
+                });
+                e.currentTarget.classList.add('activateA');
+                catagoryBtn.classList.add('unselect');
+
+                let idDatas = e.currentTarget.getAttribute('data-id').split('_');
+                let caID = idDatas[0];
+                let clID = idDatas.length > 1 && idDatas[1] != "" ? idDatas[1] : undefined;
+                resetDisply(caID, clID);
+            });
+        });
+    }
+
 
     let filter = this.document.querySelectorAll('.filterArea .nomalAttr ul a');
     filter.forEach(x => {
@@ -191,8 +234,7 @@ function setEvent()
         });
     });
 }
-function getRealData()
-{
+function getRealData() {
     let productMenu = this.document.querySelector(".shop_grid_product_area .row:last-child");
     productMenu.innerHTML = '';
     productMenu.innerHTML = createEntity(fakeProductData, ['#singleProductTemplate']).innerHTML;
@@ -201,12 +243,11 @@ function getRealData()
     let pNum = this.document.querySelector('#productCount');
     pNum.innerHTML = fakeProductData.length;
 
-    let catagoryPanel = this.document.querySelector('.catagories-menu .menu-content');
-    catagoryPanel.innerHTML = '';
-    catagoryPanel.innerHTML = createEntity(fakeCategoryData, ['#catagoryTemplate', '#categoryItemList']).innerHTML;
-
-
-
+    if (firstPage) {
+        let catagoryPanel = this.document.querySelector('.catagories-menu .menu-content');
+        catagoryPanel.innerHTML = '';
+        catagoryPanel.innerHTML = createEntity(fakeCategoryData, ['#catagoryTemplate', '#categoryItemList']).innerHTML;
+    }
 
     let classPanel = this.document.querySelector('.shop_sidebar_area .filterArea');
     classPanel.innerHTML = "";
@@ -227,27 +268,5 @@ window.onload = function () {
     });
     console.log(test);
 
-    new Promise((resolve, reject) => {
-        $.ajax({
-            type: "GET",
-            url: "/Product/GetCatagoryItems",
-            dataType: "JSON",
-            data: { "CaId" : "CG002"},
-            success: function (response) {
-                console.log(response);
-                fakeCategoryData = response.CatagoryList;
-                fakeProductData = response.ProductList;
-                fakeSubClassData = response.Attributes;
-
-                resolve("get Data from sql server Donme!!!");
-            },
-            error: function (r) {
-
-            }
-        });
-    }).then((e) => {
-        getRealData();
-        initActivate();
-    });
-
+    this.resetDisply();
 }
