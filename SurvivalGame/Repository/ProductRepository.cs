@@ -10,14 +10,13 @@ namespace SurvivalGame.Repository
 {
     public class ProductRepository
     {
-        public List<ProductViewModel> GetAllSimpleProducts()
+        public IQueryable<ProductViewModel> GetAllSimpleProducts()
         {
             var context = new SGModel();
             var products = new SGRepository<Products>(context).GetAll();
             var imgs = new SGRepository<Imgs>(context).GetAll();
             var result = from p in products
-                         join img in imgs
-                         on p.ID equals img.ProductID
+                         join img in imgs on p.ID equals img.ProductID
                          select new ProductViewModel { Name = p.Name ,ImgPath = img.Img ,Price = p.Price ,OnsalePrice = p.Price * 0.8m };
 
             return result.GroupBy(x => x.Name).Select(x =>
@@ -28,7 +27,7 @@ namespace SurvivalGame.Repository
                         Price = x.FirstOrDefault().Price ,
                         OnsalePrice = x.FirstOrDefault().OnsalePrice
                     }
-                ).ToList();
+                );
         }
         public List<CatagoryViewModel> GetCatagoryTree()
         {
@@ -100,5 +99,6 @@ namespace SurvivalGame.Repository
             };
             return attributesViewModel;
         }
+        
     }
 }

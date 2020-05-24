@@ -232,6 +232,7 @@ window.onload = function () {
             type: "GET",
             url: "/Product/GetCatagoryItems",
             dataType: "JSON",
+            data: { "CaId" : "CG002"},
             success: function (response) {
                 console.log(response);
                 fakeCategoryData = response.CatagoryList;

@@ -25,10 +25,10 @@ namespace SurvivalGame.Controllers
             return View();
         }
 
-        public ActionResult GetCatagoryItems()
+        public ActionResult GetCatagoryItems(string CaId)
         {
             ProductMenuService pService = new ProductMenuService();
-            var t = pService.GetViewData("CG001");
+            var t = pService.GetViewData(CaId);
             return Json( t,JsonRequestBehavior.AllowGet);
         }
     }

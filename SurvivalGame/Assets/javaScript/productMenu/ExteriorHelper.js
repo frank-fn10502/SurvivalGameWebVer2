@@ -33,7 +33,11 @@ function createEntity(objData, templateList, title = '', numberNo = -99) {
 
                 let testCreate = createEntity(data, result);
                 
-                return testCreate.innerHTML.toString();
+                return data != null ? testCreate.innerHTML.toString() : "";
+            }
+            else if (data == null)
+            {
+                return "";
             }
             else if (typeof data != 'object') {
                 let imgReg = /(https:\/\/|.+)(\/.+)*(.jpg|.png|.+random)/ //
@@ -41,7 +45,7 @@ function createEntity(objData, templateList, title = '', numberNo = -99) {
                     return `<img src="../../${data}" alt="imgGenByFunc">`;
                 }
                 else {
-                    return data;
+                    return data != null ? data : "";
                 }
             }
             else if (Array.isArray(data)) {
@@ -49,7 +53,7 @@ function createEntity(objData, templateList, title = '', numberNo = -99) {
                 data.forEach((x, y) => {
                     str += createEntity(x, templateList.slice(1), Object.values(x)[y], y).outerHTML.toString();
                 });
-                return str;
+                return data != null ? str : "";
             }
         }
         else {

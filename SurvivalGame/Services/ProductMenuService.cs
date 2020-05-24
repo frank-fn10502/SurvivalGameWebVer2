@@ -14,8 +14,12 @@ namespace SurvivalGame.Services
             ProductRepository pr = new ProductRepository();
             ProductMenuViewModel pView = new ProductMenuViewModel()
             {
-                ProductList = pr.GetAllSimpleProducts() ,
-                CatagoryList = pr.GetCatagoryTree() ,
+                ProductList = pr.GetAllSimpleProducts().ToList() ,
+                CatagoryList = pr.GetCatagoryTree().Select(x =>
+                {
+                    x.CategoryItemList.Insert(0 ,new SubClassViewModel { Name = "All" });
+                    return x;
+                }).ToList() ,
                 Attributes = pr.GetAttribute(catagoryID)
             };
             return pView;
