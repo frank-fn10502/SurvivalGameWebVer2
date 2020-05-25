@@ -172,6 +172,7 @@
     <Content Include="Assets\css\font-awesome.min.css" />
     <Content Include="Assets\css\jquery-ui.min.css" />
     <Content Include="Assets\css\magnific-popup.css" />
+    <Content Include="Assets\css\MemberCentre\member.css" />
     <Content Include="Assets\css\MemberLogin\MemberLogin.css" />
     <Content Include="Assets\css\MemberRegistered\MemberRegistered.css" />
     <Content Include="Assets\css\nice-select.css" />
@@ -359,6 +360,7 @@
     <Content Include="Assets\javaScript\active.js" />
     <Content Include="Assets\javaScript\classy-nav.min.js" />
     <Content Include="Assets\javaScript\jquery-2.2.4.min.js" />
+    <Content Include="Assets\javaScript\MemberCentre\member.js" />
     <Content Include="Assets\javaScript\MemberRegistered\main.js" />
     <Content Include="Assets\javaScript\plugins.js" />
     <Content Include="Assets\javaScript\popper.min.js" />
@@ -525,6 +527,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\ShoppingCart.cshtml" />
     <Content Include="Views\Product\ProductDetails.cshtml" />
+    <Content Include="Views\Member\MemberCentre.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
