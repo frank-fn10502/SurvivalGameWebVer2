@@ -245,6 +245,8 @@
     <Content Include="Assets\images\bg-img\bg-6.jpg" />
     <Content Include="Assets\images\bg-img\bg-7.jpg" />
     <Content Include="Assets\images\bg-img\bg-8.jpg" />
+    <Content Include="Assets\images\bg-img\bg1.jpg" />
+    <Content Include="Assets\images\bg-img\bg2.jpg" />
     <Content Include="Assets\images\bg-img\blog1.jpg" />
     <Content Include="Assets\images\bg-img\blog2.jpg" />
     <Content Include="Assets\images\bg-img\blog3.jpg" />
@@ -351,6 +353,9 @@
     <Content Include="Assets\images\product-img\product-big-1.jpg" />
     <Content Include="Assets\images\product-img\product-big-2.jpg" />
     <Content Include="Assets\images\product-img\product-big-3.jpg" />
+    <Content Include="Assets\images\product-img\product.JPG" />
+    <Content Include="Assets\images\product-img\product1.jpg" />
+    <Content Include="Assets\images\product-img\product3.jpg" />
     <Content Include="Assets\images\Product1.png" />
     <Content Include="Assets\images\Product2.png" />
     <Content Include="Assets\images\Product3.png" />
