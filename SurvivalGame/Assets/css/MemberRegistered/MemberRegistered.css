@@ -106,3 +106,9 @@ hr {
 .invalid-feedback {
     display: block;
 }
+
+input,
+select,
+textarea {
+    max-width: 100%;
+}
