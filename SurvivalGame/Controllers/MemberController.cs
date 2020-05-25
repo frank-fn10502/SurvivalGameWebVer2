@@ -21,5 +21,10 @@ namespace SurvivalGame.Controllers
         {
             return View();
         }
+        public ActionResult MemberCentre()
+        {
+            return View();
+        }
+        
     }
 }

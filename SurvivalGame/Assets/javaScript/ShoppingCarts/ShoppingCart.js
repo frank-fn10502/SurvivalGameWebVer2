@@ -3,7 +3,10 @@ var idRule = /^[a-zA-Z]\w*$/;
 var login = document.getElementById("LoginId")
 var PWD = document.getElementById("LoginPWD")
 var BtnLogin = document.getElementById("BtnLogin")
-console.log(document.getElementById("Buy"))
+var test = document.querySelector(".btn.btn-outline-danger")
+var additem = document.querySelector(".CartItemList")
+var detaillist = [];
+var pid = 1
 BtnLogin.addEventListener("click", function () {
     if (login.value == "Admin" && PWD.value == "Admin") {
         $('#MemberLogin').modal('toggle')
@@ -55,18 +58,6 @@ email.addEventListener("click", function () {
     }
 });
 
-function SendEmail(idtmp, eltmp) {
-    Email.send({
-        SecureToken: "d3b735aa-0723-46d1-9d26-87e1edbfb945",
-        To: `${eltmp.value}`,
-        From: "管理者<bsmvc20@gmail.com>",
-        Subject: "密碼已經被重設",
-        Body: `使用者${idtmp.value}`
-    }).then(
-        message => alert(message)
-    );
-}
-
 function TempAlert(msg) {
     let el = document.createElement("div")
     el.setAttribute("style",
@@ -76,4 +67,93 @@ function TempAlert(msg) {
         el.parentNode.removeChild(el);
     }, 2000)
     document.body.appendChild(el);
+}
+test.addEventListener('click', function () {
+    let rnum = Math.floor(Math.random() * 20 + 1)
+    let temp = {
+        name: '',
+        brief: '',
+        count: '',
+        price: '',
+    }
+    let ItemTmp = document.getElementById("TemplateCartItem")
+    let cloneContent = ItemTmp.content.cloneNode(true);
+    let productId = cloneContent.querySelector('.CartSingleItem')
+    let img = cloneContent.querySelector(".CartImg img");
+    let num = Math.floor(Math.random() * 540 + 1);
+    let name = cloneContent.querySelector('.CartName a')
+    let total = cloneContent.querySelectorAll(".CartTotal")[0].children[1]
+    let brief = cloneContent.querySelectorAll(".CartBrief")[0].children[1]
+    let price = cloneContent.querySelectorAll(".CartPrice")[0].children[1]
+    let count = cloneContent.querySelector(".CartCount select")
+    let setkey = cloneContent.querySelector('.CartRemove a')
+    productId.setAttribute("id", `P0${pid}`);
+    setkey.setAttribute("data-key", `P0${pid}`)
+    img.src = `https://picsum.photos/200/200/?random=${rnum}`
+    name.textContent = "台灣製造 銀色 HFC 112 P8 6mm ABS 手拉空氣槍"
+    temp.name = "台灣製造 銀色 HFC 112 P8 6mm ABS 手拉空氣槍"
+    brief.textContent = "HA112S"
+    temp.brief = "HA112S"
+    price.textContent = `$${num}`
+    temp.price = num
+    for (let i = 1; i < rnum; i++) {
+        let option1 = document.createElement("option")
+        option1.value = i;
+        option1.text = i;
+        count.add(option1)
+    }
+    total.textContent = `$${num}`
+    additem.appendChild(cloneContent)
+    ReCart(pid);
+    pid++
+    temp.count = rnum
+    var ChangeProduct = document.querySelectorAll(".CartName")
+    detaillist.push(temp)
+    ChangeProudct(ChangeProduct);
+
+});
+
+function ChangeSelect() {
+    $(document).ready(function () {
+        $('select').niceSelect();
+    });
+}
+
+function ReCart(el) {
+    let caritem = document.querySelector(`#P0${el} .CartRemove a`)
+    caritem.addEventListener('click', function () {
+        let tmp = this.getAttribute("data-key")
+        let Re = document.getElementById(`${tmp}`)
+        additem.removeChild(Re)
+    })
+}
+
+function ChangeProudct(el) {
+    el.forEach((element, index) => {
+        element.addEventListener("click", function (e) {
+            let tmp = detaillist[index]
+            let productName = document.querySelectorAll(".CartChangeName span")[1]
+            let productBrief = document.querySelectorAll(".CartChangeBrief span")[1]
+            let productPrice = document.querySelectorAll(".CartChangePrice span")[1]
+            let productCount = document.querySelectorAll(".CartChangeCount .list")[0]
+            let num = document.querySelector('.CartChangeCount .current')
+            productCount.innerHTML = '';
+            productName.innerText = tmp.name
+            productBrief.innerText = tmp.brief
+            productPrice.innerText = tmp.price
+            for (let i = 1; i < tmp.count; i++) {
+                let op = document.createElement("li")
+                op.innerText = i
+                op.setAttribute("data-value", i)
+                op.classList.add('option')
+                if (i == 1) {
+                    num.innerText = i
+                    op.classList.add('selected')
+                }
+                productCount.appendChild(op)
+            }
+        })
+    });
+    ChangeSelect();
+
 }

@@ -1,11 +1,5 @@
 * {
-    padding: 0;
-    margin: 0;
     list-style: none;
-}
-
-.table td {
-    vertical-align: middle;
 }
 
 .Detail div {
@@ -25,4 +19,85 @@
 
 #FogetPWD .invalid-feedback {
     text-indent: 1.5em;
+}
+
+.Custom {
+    flex: auto;
+}
+
+.CartContext {
+    margin: auto;
+}
+
+.CartProductTotal {
+    text-indent: 3.5em;
+}
+
+.CartCount .nice-select span:first-child {
+    font-size: 18px;
+    display: block;
+}
+
+.CartCount .nice-select {
+    float: unset;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+.nice-select .list {
+    right: 0;
+}
+
+.CartContext span:first-child {
+    display: none;
+}
+
+#CartChange .modal-body {
+    font-size: 20px;
+}
+
+    #CartChange .modal-body div {
+        line-height: 3rem;
+    }
+
+#CartChange .CartChangeCount {
+    display: inline-flex;
+}
+
+@media screen and (max-width: 992px) {
+    .CartHeader {
+        display: none;
+    }
+
+    .CartContext span:first-child {
+        display: inline-block;
+    }
+
+    .CartContext {
+        flex-direction: column;
+    }
+
+        .CartContext div {
+            line-height: 1.5rem;
+        }
+
+        .CartContext .nice-select {
+            line-height: 40px;
+        }
+
+    @media screen and (max-width: 568px) {
+        .CartPicWarp {
+            margin: auto;
+            padding: 0;
+        }
+
+        .CartContext {
+            padding: 0;
+        }
+        .CartContext DIV {
+                padding-right: 0;
+       }
+    }
 }

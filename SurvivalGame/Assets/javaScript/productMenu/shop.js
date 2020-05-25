@@ -171,11 +171,14 @@ function setEvent() {
                 subCatagory.forEach(x => {
                     x.classList.remove('activateA');
                 });
+                catagoryA.forEach(x => {
+                    if (x != e.currentTarget) {
+                        $(`#${x.parentElement.querySelector('ul').id}`).collapse('hide');
+                    }
+                });
                 e.currentTarget.classList.remove('unselect');
                 resetDisply();
             }
-            else
-                e.currentTarget.classList.add('unselect');
         });
 
         catagoryA = this.document.querySelectorAll('#menu-content2 > li > a');

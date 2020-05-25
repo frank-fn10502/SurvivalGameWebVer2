@@ -176,6 +176,7 @@
     <Content Include="Assets\css\MemberLogin\hamburgers.css" />
     <Content Include="Assets\css\MemberLogin\hamburgers.min.css" />
     <Content Include="Assets\css\MemberLogin\main.css" />
+    <Content Include="Assets\css\MemberCentre\member.css" />
     <Content Include="Assets\css\MemberLogin\MemberLogin.css" />
     <Content Include="Assets\css\MemberLogin\select2.css" />
     <Content Include="Assets\css\MemberLogin\select2.min.css" />
@@ -260,6 +261,8 @@
     <Content Include="Assets\images\bg-img\bg-6.jpg" />
     <Content Include="Assets\images\bg-img\bg-7.jpg" />
     <Content Include="Assets\images\bg-img\bg-8.jpg" />
+    <Content Include="Assets\images\bg-img\bg1.jpg" />
+    <Content Include="Assets\images\bg-img\bg2.jpg" />
     <Content Include="Assets\images\bg-img\blog1.jpg" />
     <Content Include="Assets\images\bg-img\blog2.jpg" />
     <Content Include="Assets\images\bg-img\blog3.jpg" />
@@ -368,6 +371,9 @@
     <Content Include="Assets\images\product-img\product-big-1.jpg" />
     <Content Include="Assets\images\product-img\product-big-2.jpg" />
     <Content Include="Assets\images\product-img\product-big-3.jpg" />
+    <Content Include="Assets\images\product-img\product.JPG" />
+    <Content Include="Assets\images\product-img\product1.jpg" />
+    <Content Include="Assets\images\product-img\product3.jpg" />
     <Content Include="Assets\images\Product1.png" />
     <Content Include="Assets\images\Product2.png" />
     <Content Include="Assets\images\Product3.png" />
@@ -380,6 +386,7 @@
     <Content Include="Assets\javaScript\MemberLogin\select2.js" />
     <Content Include="Assets\javaScript\MemberLogin\select2.min.js" />
     <Content Include="Assets\javaScript\MemberLogin\tooltip.js" />
+    <Content Include="Assets\javaScript\MemberCentre\member.js" />
     <Content Include="Assets\javaScript\MemberRegistered\main.js" />
     <Content Include="Assets\javaScript\plugins.js" />
     <Content Include="Assets\javaScript\popper.min.js" />
@@ -387,7 +394,6 @@
     <Content Include="Assets\javaScript\productMenu\ExteriorHelper.js" />
     <Content Include="Assets\javaScript\productMenu\shop.js" />
     <Content Include="Assets\javaScript\ShoppingCarts\ShoppingCart.js" />
-    <Content Include="Assets\javaScript\ShoppingCarts\smtp.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -638,6 +644,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\ShoppingCart.cshtml" />
     <Content Include="Views\Product\ProductDetails.cshtml" />
+    <Content Include="Views\Member\MemberCentre.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
