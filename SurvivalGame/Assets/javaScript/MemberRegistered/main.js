@@ -32,12 +32,12 @@ var AddressInvalid = document.querySelector(".AddressInvalid");
 var PhoneInvalid = document.querySelector(".PhoneInvalid");
 var EmailInvalid = document.querySelector(".EmailInvalid");
 
-document.getElementById("Registered").addEventListener("click", function(e){
-    e.preventDefault();
-});
+//document.getElementById("Registered").addEventListener("click", function (e) {
+//    e.preventDefault();
+//});
 
 inputName.addEventListener("keyup", function () {
-    
+
     if (rule_name.test(inputName.value) === true && inputName.value != "") {
         NameInvalid.setAttribute("style", "display: none;");
     } else {
@@ -46,7 +46,7 @@ inputName.addEventListener("keyup", function () {
 })
 
 inputAccount.addEventListener("keyup", function () {
-    
+
     if (rule_account.test(inputAccount.value) === true && inputAccount.value != "") {
         AccountInvalid.setAttribute("style", "display: none;");
     } else {
@@ -55,7 +55,7 @@ inputAccount.addEventListener("keyup", function () {
 })
 
 inputPassword.addEventListener("keyup", function () {
-    if (rule_password.test(inputPassword.value) === true && inputPassword.value.length >= 8 && inputPassword.value.length <= 35) {
+    if (rule_password.test(inputPassword.value) === true && inputPassword.value.length >= 8 && inputPassword.value.length <= 35 && inputPassword.value != "") {
         PasswordInvalid.setAttribute("style", "display: none;");
     } else {
         PasswordInvalid.setAttribute("style", "display: block;");
@@ -71,7 +71,7 @@ inputCheckPassword.addEventListener("keyup", function () {
 })
 
 inputBirth.addEventListener("keyup", function () {
-    if (inputBirth.value != null) {
+    if (inputBirth.value != "") {
         BirthdayInvalid.setAttribute("style", "display: none;");
     } else {
         BirthdayInvalid.setAttribute("style", "display: block;");
@@ -79,7 +79,7 @@ inputBirth.addEventListener("keyup", function () {
 })
 
 inputPostCode.addEventListener("keyup", function () {
-    if (rule_postCode.test(inputPostCode.value) === true && inputPostCode.value.length >= 3) {
+    if (rule_postCode.test(inputPostCode.value) === true && inputPostCode.value.length >= 3 && inputPostCode.value.length != "") {
         PostCodeInvalid.setAttribute("style", "display: none;");
     } else {
         PostCodeInvalid.setAttribute("style", "display: block;");
@@ -95,7 +95,7 @@ inputAddress.addEventListener("keyup", function () {
 })
 
 inputPhone.addEventListener("keyup", function () {
-    if (rule_phone.test(inputPhone.value) === true && inputPhone.value.length == 10) {
+    if (rule_phone.test(inputPhone.value) === true && inputPhone.value.length == 10 && inputPhone.value.length != "") {
         PhoneInvalid.setAttribute("style", "display: none;");
     } else {
         PhoneInvalid.setAttribute("style", "display: block;");
@@ -103,7 +103,7 @@ inputPhone.addEventListener("keyup", function () {
 })
 
 inputEmail.addEventListener("keyup", function () {
-    if (rule_email.test(inputEmail.value) === true) {
+    if (rule_email.test(inputEmail.value) === true && inputEmail.value != "") {
         EmailInvalid.setAttribute("style", "display: none;");
     } else {
         EmailInvalid.setAttribute("style", "display: block;");
@@ -112,4 +112,4 @@ inputEmail.addEventListener("keyup", function () {
 
 // //生日
 // var birth = document.querySelectorAll("#Birth");
-// console.log(birth[0].value)
+// console.log(inputBirth["value"])
