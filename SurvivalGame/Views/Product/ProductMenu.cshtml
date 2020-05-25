@@ -25,7 +25,10 @@
                 <div class="shop_sidebar_area">
 
                     <!-- Widget Title -->
-                    <h6 class="widget-title mb-30">類別</h6>
+                    <div class="catagoryTitle d-flex">
+                        <h6 class="widget-title mb-30">類別</h6>
+                        <button class="btn mb-30">All</button>
+                    </div>
                     <!-- ##### Single Widget ##### -->
                     <div class="widget catagory mb-50">
                         <!--  Catagories  -->
@@ -257,14 +260,14 @@
 
 <template id="catagoryTemplate">
     <li>
-        <a href="#collapse{{index}}" data-toggle="collapse" aria-expanded="false" class="title">{{categoryTitle}}  </a>
+        <a href="#collapse{{index}}" data-toggle="collapse" aria-expanded="false" class="title">{{categoryTitle}}</a>
         <ul class="sub-menu collapse" id="collapse{{index}}">
             {{categoryItemList}}
         </ul>
     </li>
 </template>
 <template id="categoryItemList">
-    <li><a href="#">{{Name}}</a></li>
+    <li><a href="#" data-id="{{caID}}_{{clID}}">{{Name}}</a></li>
 </template>
 
 <!--

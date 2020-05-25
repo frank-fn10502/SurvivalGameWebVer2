@@ -9,6 +9,6 @@ namespace SurvivalGame.ViewModels.ProductMenu
     public class CatagoryViewModel
     {
         public string CategoryTitle { get; set; }
-        public List<SubClassViewModel> CategoryItemList { get; set; }
+        public List<SubCatagoryViewModel> CategoryItemList { get; set; }
     }
 }

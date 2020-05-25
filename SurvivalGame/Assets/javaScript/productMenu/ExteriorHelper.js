@@ -6,6 +6,10 @@ function createEntity(objData, templateList, title = '', numberNo = -99) {
         });
         return div;
     }
+    else if (!objData) {
+        let div = document.createElement('div');
+        return div;
+    }
     let templateID = templateList[0];
 
     let template = document.querySelector(templateID).content.cloneNode(true);
