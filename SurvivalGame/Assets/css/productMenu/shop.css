@@ -116,4 +116,35 @@
   -webkit-box-shadow: 0 0 5px 4px #aaa;
           box-shadow: 0 0 5px 4px #aaa;
 }
+
+.shop_sidebar_area .catagoryTitle button.btn {
+  font-size: 10px;
+  margin: 10px;
+  margin-top: 0;
+  padding: 3px 6px;
+  background-color: #dc0345;
+  color: #fff;
+  -webkit-transition: .2s;
+  transition: .2s;
+  opacity: 1;
+}
+
+.shop_sidebar_area .catagoryTitle button.btn:hover {
+  opacity: .5;
+}
+
+.shop_sidebar_area .catagoryTitle button.btn.unselect:hover {
+  background-color: #aaa;
+  color: #000;
+}
+
+.shop_sidebar_area .catagoryTitle button.btn.unselect {
+  background-color: #ddd;
+  color: #000;
+}
+
+.shop_sidebar_area .catagoryTitle button.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 /*# sourceMappingURL=shop.css.map */

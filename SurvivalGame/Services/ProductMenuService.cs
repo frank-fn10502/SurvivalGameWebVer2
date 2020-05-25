@@ -9,14 +9,23 @@ namespace SurvivalGame.Services
 {
     public class ProductMenuService
     {
-        public ProductMenuViewModel GetViewData(string catagoryID)
+        public ProductMenuViewModel GetViewData(string catagoryID ,string classID)
         {
             ProductRepository pr = new ProductRepository();
             ProductMenuViewModel pView = new ProductMenuViewModel()
             {
-                ProductList = pr.GetAllSimpleProducts() ,
-                CatagoryList = pr.GetCatagoryTree() ,
-                Attributes = pr.GetAttribute(catagoryID)
+                ProductList = pr.GetSimpleProductsByCatagory(catagoryID ,classID).ToList() ,
+                CatagoryList = pr.GetCatagoryTree().Select(x =>
+                {
+                    x.CategoryItemList.Insert(0 ,new SubCatagoryViewModel 
+                    { 
+                        Name = "All" ,
+                        CaID = x.CategoryItemList.First().CaID,
+                        ClID = null
+                    });
+                    return x;
+                }).ToList() ,
+                Attributes = pr.GetAttribute(catagoryID ,classID)
             };
             return pView;
         }
