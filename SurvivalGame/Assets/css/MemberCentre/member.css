@@ -1,0 +1,90 @@
+#ModifyLabel {
+    padding: 9px 15px;
+    cursor: pointer;
+}
+
+.ModfiyLayout {
+    display: inline-flex;
+    position: relative;
+    height: 22px;
+    line-height: 22px;
+    min-width: 35px;
+    padding: 0 5px;
+    margin-top: 8px;
+    border: 1px solid #d2d2d2;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: .1s linear;
+    cursor: pointer;
+}
+
+.ModfiyLayoutOn {
+    background-color: rgba(255, 0, 0, 0.7);
+    border-color: rgba(255, 0, 0, 0.7);
+    transition: linear .1s;
+
+}
+
+.ModfiyLayoutIOff {
+    position: absolute;
+    background-color: #d2d2d2;
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+    left: 5px;
+    top: 2px;
+}
+
+.ModfiyEmOff {
+    position: relative;
+    top: 0;
+    width: 25px;
+    margin-left: 25px;
+    text-align: center;
+    color: #999;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.ModfiyLayoutEmOn {
+    color: #fff;
+    margin-right: 25px;
+    margin-left: 0px;
+    transition: linear .1s;
+
+}
+
+.ModfiyLayoutIOn {
+    background-color: #fff;
+    left: 40px;
+    transition: linear .1s;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+.BirthdayText p {
+    margin: 0;
+}
+
+.essence-btn {
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.essence-btn-save {
+    background-color: #dc0345;
+}
+
+.essence-btn:hover,
+.essence-btn:focus {
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #0315ff;
+}
+
+.essence-btn-save:hover,
+.essence-btn-save:focus {
+    background-color: #dc0345;
+}

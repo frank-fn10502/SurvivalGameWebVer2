@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewBag.Title = "MemberCentre";
+}
+
+<!-- ##### Breadcumb Area Start ##### -->
+<div class="breadcumb_area bg-img" style="background-image: url(../../Assets/images/bg-img/breadcumb.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="page-title text-center">
+                    <h2>會員中心</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ##### Breadcumb Area End ##### -->
+<!-- ##### Checkout Area Start ##### -->
+<div class="checkout_area my-3">
+    <div class="container">
+        <div class="row">
+            <!-- 左導覽列 -->
+            <div class=" col-12 col-md-3 NavMember my-3">
+                <div class="nav flex-md-column nav-pills" id="v-pills-tab" role="tablist"
+                     aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                       role="tab" aria-controls="v-pills-home" aria-selected="true">會員資料</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                       role="tab" aria-controls="v-pills-profile" aria-selected="false">購買紀錄</a>
+                </div>
+            </div>
+            <!-- 中間內容 -->
+            <div class="col-12 col-md-9 ">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                         aria-labelledby="v-pills-home-tab">
+                        <div class="checkout_details_area  clearfix">
+                            <div class="col-12">
+                                <div class="page-title text-center">
+                                    <h3>會員資料</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12  mb-3 text-right">
+                                    <label id="ModifyLabel">修改會員資料</label>
+                                    <input type="checkbox" class="d-none" id="ModfiyMeber">
+                                    <div class="ModfiyLayout" data-toggle="tooltip" data-placement="bottom"
+                                         title=" 修改後須按儲存">
+                                        <i class="ModfiyLayoutIOff"></i><em class="ModfiyEmOff">OFF</em>
+                                    </div>
+                                </div>
+                            </div>
+                            <form action=" #" method="post" id="MemberForm" class="">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <label class="Name" for=" Name">姓名：</label>
+                                        <input type="text" class="form-control FromList" id="Name" value=""
+                                               required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label class="Account" for="Account">帳號：</label>
+                                        <input type="text" class="form-control FromRead" id="Account" value=""
+                                               disabled>
+                                        <p class="FromOff" style="display: none;">test</p>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label class="Password">密碼：</label>
+                                        <input type="password" class="form-control FromList" id="Password" value=""
+                                               required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label class="Birthday " for="Birth">生日：</label>
+                                        <div class="BirthdayBox">
+                                            <input type="date" class="form-control FromRead" disabled
+                                                   name="" id="Birth">
+                                            <p class="FromOff" style="display: none;">2019-05-20</p>
+                                            <div class="BirthdayText">
+                                                <p class="invalid-feedback">※未滿18歲請勿購買玩具槍商品</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label class="PostCode" for="PostCode">郵遞區號：</label>
+                                        <input type="text" class="form-control FromList" id="PostCode" value=""
+                                               oninput="value=value.replace(/[^\d]/g,'')" required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label class="Address" for="Address">地址：</label>
+                                        <input type="text" class="form-control FromList" id="Address" value=""
+                                               required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label class="Phone" for="Phone">手機</label>
+                                        <input type="tel" class="form-control FromList" id="Phone" value=""
+                                               oninput="value=value.replace(/[^\d]/g,'')" required>
+                                    </div>
+                                    <div class="col-12 mb-4 validate-input">
+                                        <label class="EmailAddress" for="Email">信箱：</label>
+                                        <input type="email" class="form-control FromList InputEmail" id="Email"
+                                               required>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="checkout-btn my-3 Submit">
+                                <a href="" class="btn essence-btn essence-btn-save" style="display: none;"
+                                   id="ModifySave">儲存</a>
+                                <a href="" class="btn essence-btn" id="SignOut">登出</a>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                         aria-labelledby="v-pills-profile-tab">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id accusantium enim saepe
+                        eius
+                        mollitia vero, ipsum numquam, nisi, commodi tenetur voluptatem accusamus consectetur
+                        in
+                        voluptatibus vel ab. Ad, provident distinctio!
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ##### Checkout Area End ##### -->
+
+@section topCss{
+    <link href="~/Assets/css/MemberCentre/member.css" rel="stylesheet" />
+}
+
+
+@section bottomJs{
+    <script src="~/Assets/javaScript/MemberCentre/member.js"></script>
+}
