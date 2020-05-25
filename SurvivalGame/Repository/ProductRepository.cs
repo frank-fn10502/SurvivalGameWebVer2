@@ -1,4 +1,5 @@
 ﻿using Microsoft.Ajax.Utilities;
+using Newtonsoft.Json;
 using SurvivalGame.Models;
 using SurvivalGame.ViewModels.ProductMenu;
 using System;
@@ -8,6 +9,11 @@ using System.Web;
 
 namespace SurvivalGame.Repository
 {
+    public class testr
+    {
+        public string color { get; set; }
+        public string cc { get; set; }
+    }
     public class ProductRepository
     {
         public IQueryable<ProductViewModel> GetAllSimpleProducts()
@@ -110,6 +116,9 @@ namespace SurvivalGame.Repository
                 RangeList = rangeViewModels ,
                 OtherList = normalViewModels
             };
+            var test = result.GroupBy(x => x.p.Color).Where(x => x.Key.Contains("{")).Select(x => x.Key);
+            var jtest = test.ToList()[0].ToString();
+            var jsonR = JsonConvert.DeserializeObject<testr>(jtest);
             return attributesViewModel;
         }
 
