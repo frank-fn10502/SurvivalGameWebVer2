@@ -212,7 +212,12 @@ function setEvent() {
             });
         });
     }
-
+    let pCards = this.document.querySelectorAll('.shop_grid_product_area .single-product-wrapper');
+    pCards.forEach(x => {
+        x.addEventListener('click', (e) => {
+            window.location.href = "./productDetails";
+        });
+    });
 
     let filter = this.document.querySelectorAll('.filterArea .nomalAttr ul a');
     filter.forEach(x => {

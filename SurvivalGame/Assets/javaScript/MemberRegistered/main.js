@@ -5,7 +5,7 @@ var inputAccount = document.getElementById("Account");
 var rule_account = /^[a-zA-Z_]\w*$/;
 
 var inputPassword = document.getElementById("Password");
-var rule_password = /[A-Z]|[a-z]|\d+[a-z]|[A-Z]|\d+\d|[A-Z]|[a-z]+\d|[a-z]|[A-Z][A-Z]|\d|[a-z][a-z]|\d|[A-Z]/;
+var rule_password = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,35}$/;
 
 var inputCheckPassword = document.getElementById("CheckPassword");
 
@@ -17,7 +17,7 @@ var rule_postCode = /\d/;
 var inputAddress = document.getElementById("Address");
 
 var inputPhone = document.getElementById("Phone");
-var rule_phone = /[0-9|-]+/;
+var rule_phone = /[0-9]/;
 
 var inputEmail = document.getElementById("Email");
 var rule_email = /^([a-zA-Z0-9_\-\.]+)@[a-zA-Z0-9_\-\.]+\..{2,3}$/;
@@ -55,7 +55,7 @@ inputAccount.addEventListener("keyup", function () {
 })
 
 inputPassword.addEventListener("keyup", function () {
-    if (rule_password.test(inputPassword.value) === true && inputPassword.value.length >= 8 && inputPassword.value.length <= 35 && inputPassword.value != "") {
+    if (rule_password.test(inputPassword.value) === true && inputPassword.value != "") {
         PasswordInvalid.setAttribute("style", "display: none;");
     } else {
         PasswordInvalid.setAttribute("style", "display: block;");
