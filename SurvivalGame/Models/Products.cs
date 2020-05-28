@@ -29,7 +29,7 @@ namespace SurvivalGame.Models
         [StringLength(150)]
         public string Name { get; set; }
 
-        [StringLength(150)]
+        [StringLength(50)]
         public string Color { get; set; }
 
         public string Depiction { get; set; }
