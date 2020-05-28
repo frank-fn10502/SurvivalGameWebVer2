@@ -96,8 +96,34 @@
         .CartContext {
             padding: 0;
         }
-        .CartContext DIV {
+
+            .CartContext DIV {
                 padding-right: 0;
-       }
+            }
     }
 }
+
+.StepArea {
+    display: flex;
+    justify-content: center;
+}
+
+    .StepArea ul {
+        font-size: 2rem;
+    }
+
+        .StepArea ul li {
+            margin: 10px 30px;
+            position:relative;
+            text-align
+        }
+        .StepArea ul span {
+            position: absolute;
+            background-color: #d2d2d2;
+            text-align:center;
+            width: 45px;
+            height: 45px;
+            border-radius: 25px;
+            left: -15%;
+            top: 2px;
+        }
