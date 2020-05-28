@@ -1,4 +1,5 @@
-﻿using SurvivalGame.Services;
+﻿using SurvivalGame.Repository;
+using SurvivalGame.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,9 @@ namespace SurvivalGame.Controllers
 
         public ActionResult GetCatagoryItems(string CaId ,string clId)
         {
+            //var temp = new IndexRepository();
+            //var result = temp.GetAllSortItem();
+
             ProductMenuService pService = new ProductMenuService();
             var t = pService.GetViewData(CaId ,clId);
             return Json( t,JsonRequestBehavior.AllowGet);
