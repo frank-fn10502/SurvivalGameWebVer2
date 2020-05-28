@@ -9,6 +9,8 @@ namespace SurvivalGame.Controllers
 {
     public class ProductController :Controller
     {
+        private ProductMenuService pService = new ProductMenuService();
+
         // GET: Product
         public ActionResult ProductMenu()
         {
@@ -27,7 +29,6 @@ namespace SurvivalGame.Controllers
 
         public ActionResult GetCatagoryItems(string CaId ,string clId)
         {
-            ProductMenuService pService = new ProductMenuService();
             var t = pService.GetViewData(CaId ,clId);
             return Json( t,JsonRequestBehavior.AllowGet);
         }

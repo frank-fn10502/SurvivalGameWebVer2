@@ -9,9 +9,10 @@ namespace SurvivalGame.Services
 {
     public class ProductMenuService
     {
+        private ProductRepository pr = new ProductRepository();
         public ProductMenuViewModel GetViewData(string catagoryID ,string classID)
         {
-            ProductRepository pr = new ProductRepository();
+            
             ProductMenuViewModel pView = new ProductMenuViewModel()
             {
                 ProductList = pr.GetSimpleProductsByCatagory(catagoryID ,classID).ToList() ,
