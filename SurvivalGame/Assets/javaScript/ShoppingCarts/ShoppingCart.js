@@ -155,5 +155,53 @@ function ChangeProudct(el) {
         })
     });
     ChangeSelect();
-
 }
+var active = document.querySelectorAll(".card-header")
+active.forEach((el) => {
+    el.addEventListener('click', function () {
+        let Steolayout = document.querySelectorAll('.StepArea div')
+        let tmp = el.getAttribute('data-target')
+        Steolayout.forEach(element => {
+            if (element.getAttribute('data-target') == tmp) {
+                element.classList.add('active')
+            } else {
+                element.classList.remove('active')
+            }
+        })
+    });
+});
+var checkShip = document.querySelectorAll(".ShipGroup")
+checkShip.forEach((el, index) => {
+    el.addEventListener('click', function () {
+
+        let Shipchek = document.querySelector(`#ShipgridRadios${index + 1}`)
+        Shipchek.checked = true;
+        let Shiplayout = document.querySelectorAll('.InputShipGroup')
+        Shiplayout.forEach(element => {
+            if (element.checked) {
+                el.classList.add('FromLayout')
+                let ship = document.getElementById('inputGroupSelect01')
+                ship.innerText = el.children[1].innerText
+            } else {
+                element.parentNode.classList.remove('FromLayout')
+            }
+        });
+    })
+})
+var checkfrom = document.querySelectorAll(".PaymentGroup")
+checkfrom.forEach((el, index) => {
+    el.addEventListener('click', function () {
+        let labelchek = document.querySelector(`#gridRadios${index + 1}`)
+        labelchek.checked = true;
+        let labellayout = document.querySelectorAll('.InputPaymentGroup')
+        labellayout.forEach(element => {
+            if (element.checked) {
+                el.classList.add('FromLayout')
+                let ship = document.getElementById('inputGroupSelect02')
+                ship.innerText = el.children[1].innerText
+            } else {
+                element.parentNode.classList.remove('FromLayout')
+            }
+        });
+    })
+})
