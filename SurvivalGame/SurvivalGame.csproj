@@ -53,6 +53,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="jose-jwt, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jose-jwt.2.5.0\lib\net461\jose-jwt.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -158,6 +161,7 @@
     <Compile Include="ViewModels\Index\SortViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\AttributesViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\CatagoryViewModel.cs" />
+    <Compile Include="ViewModels\ProductMenu\Color.cs" />
     <Compile Include="ViewModels\ProductMenu\ColorItemViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\ColorViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\NormalViewModel.cs" />

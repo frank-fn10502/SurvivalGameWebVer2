@@ -9,11 +9,6 @@ using System.Web;
 
 namespace SurvivalGame.Repository
 {
-    public class Color
-    {
-        public string color { get; set; }
-        public string cc { get; set; }
-    }
     public class ProductRepository
     {
         public IQueryable<ProductViewModel> GetAllSimpleProducts()
