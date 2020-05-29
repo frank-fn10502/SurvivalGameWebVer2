@@ -7,9 +7,7 @@ namespace SurvivalGame.ViewModels.Index
 {
     public class SortViewModel
     {
-        public string ClothesImg{ get; set; }
-        public string GunsImg { get; set; }
-
-        public string AccessoriesImg { get; set; }
+        public string Img{ get; set; }
+        public string Title { get; set; }
     }
 }
