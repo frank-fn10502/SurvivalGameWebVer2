@@ -26,5 +26,38 @@ namespace SurvivalGame.Repository
                 }
             ).ToList();
         }
+        public List<PopularViewModel> GetAllPopularItem()
+        {
+            var data = from ca in _context.Catagory
+                       join cl in _context.Class on ca.ID equals cl.CatagoryID
+                       join p in _context.Products on cl.ID equals p.ClassID
+                       join img in _context.Imgs on p.ID equals img.ProductID
+                       select new { ca, cl, p, img };
+
+            return data.GroupBy(x => x.ca.Name).Select(x =>
+            new PopularViewModel
+            {
+                PopularName = x.Key,
+                PopularPrice = (int)x.FirstOrDefault().p.Price,
+                PopularImg = x.FirstOrDefault().img.Img
+            }
+            ).ToList();
+        }
+        public List<NewViewModel> GetAllNewItem()
+        {
+            var data = from ca in _context.Catagory
+                       join cl in _context.Class on ca.ID equals cl.CatagoryID
+                       join p in _context.Products on cl.ID equals p.ClassID
+                       join img in _context.Imgs on p.ID equals img.ProductID
+                       select new { ca, cl, p, img };
+
+            return data.GroupBy(x => x.ca.Name).Select(x =>
+            new NewViewModel
+            {
+                NewImg = x.FirstOrDefault().img.Img
+            }
+            ).ToList();
+        }
+
     }
 }
