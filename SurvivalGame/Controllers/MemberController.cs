@@ -30,18 +30,18 @@ namespace SurvivalGame.Controllers
             return View();
         }
 
-        [HttpPost]
+        //[HttpPost]
         //public void GetRegistered(string Name, string Account, string Password, DateTime Birth, int Postcode, string Address, string Phone, string Email)
         //{
-            //return RedirectToAction("Index","Home");
-
-            //if (!ModelState.IsValid)
-            //{
-            //    return View();
-            //}
-
+        //return RedirectToAction("Index","Home");
+        //if (!ModelState.IsValid)
+        //{
+        //    return View();
         //}
-        public ActionResult GetRegistered([Bind(Include = "string Name, string Account, string Password, DateTime Birth, int Postcode, string Address, string Phone, string Email")] MemberRegisteredViewModel registeredVM)
+        //}
+
+        [HttpPost]
+        public ActionResult GetRegistered([Bind(Include = "Name, Account, Password, Birth, Postcode, Address, Phone, Email")] MemberRegisteredViewModel registeredVM)
         {
             if (ModelState.IsValid)
             {
@@ -52,7 +52,8 @@ namespace SurvivalGame.Controllers
             return View(registeredVM);
         }
 
-        public ActionResult GetLogin([Bind(Include = "string Account, string Password")] MemberLoginViewModel loginVM)
+        [HttpPost]
+        public ActionResult GetLogin([Bind(Include = "Account, Password")] MemberLoginViewModel loginVM)
         {
             if (ModelState.IsValid)
             {
@@ -62,5 +63,6 @@ namespace SurvivalGame.Controllers
             }
             return View(loginVM);
         }
+
     }
 }
