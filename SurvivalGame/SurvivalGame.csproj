@@ -669,13 +669,13 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Product\ProductMenu.cshtml" />
     <Content Include="Views\Member\MemberRegistered.cshtml" />
-    <Content Include="Views\Member\MemberLogin.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\ShoppingCart.cshtml" />
     <Content Include="Views\Product\ProductDetails.cshtml" />
     <Content Include="Views\Member\MemberCentre.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartialView.cshtml" />
+    <Content Include="Views\Member\MemberLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
