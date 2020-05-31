@@ -156,6 +156,7 @@
     <Compile Include="Repository\IndexRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\SGRepository.cs" />
+    <Compile Include="Services\IndexServices.cs" />
     <Compile Include="Services\ProductMenuService.cs" />
     <Compile Include="ViewModels\Index\NewViewModel.cs" />
     <Compile Include="ViewModels\Index\PopularViewModel.cs" />
