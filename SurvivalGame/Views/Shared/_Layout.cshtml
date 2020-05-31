@@ -24,6 +24,7 @@
 
     <link href="~/Assets/css/core-style.css" rel="stylesheet" />
     <link href="~/Assets/css/style.css" rel="stylesheet" />
+    <link href="~/Assets/css/_Layout/layout.css" rel="stylesheet" />
 
     @RenderSection("topCss", required: false)
 </head>
@@ -49,25 +50,26 @@
                     <div class="classynav">
                         <ul>
                             <li>
-                                <a href="#">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#">News</a>
-                                <ul class="dropdown">
-                                    <li><a href="@Url.Action("productMenu" ,"product")">New</a></li>
-                                    <li><a href="@Url.Action("productMenu" ,"product")">Hot</a></li>
-                                    <li><a href="@Url.Action("productMenu" ,"product")">Sale</a></li>
-                                </ul>
-                            </li>
-                            <li>
                                 <a href="#">Products</a>
                                 <ul class="dropdown">
+                                    <li class="specail"><a href="@Url.Action("productMenu" ,"product")">New</a></li>
+                                    <li class="specail"><a href="@Url.Action("productMenu" ,"product")">Hot</a></li>
+                                    <li class="specail"><a href="@Url.Action("productMenu" ,"product")">Sale</a></li>
                                     <li><a href="@Url.Action("productMenu" ,"product")">Guns</a></li>
                                     <li><a href="@Url.Action("productMenu" ,"product")">Clothes</a></li>
                                     <li><a href="@Url.Action("productMenu" ,"product")">Asscessor</a></li>
                                 </ul>
                             </li>
+                            <!-- <li>
+                                <a href="#">News</a>
+                                <ul class="dropdown">
 
+                                </ul>
+                            </li> -->
+
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
                             <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
@@ -198,7 +200,7 @@
                             <div class="footer_menu mt-3 p-0">
                                 <ul class="d-flex flex-column" style="line-height: 40px;">
                                     <li>
-                                        <a href="">Shop</a>
+                                        <a href="">About Us</a>
                                     </li>
                                     <li><a href="">Contact</a></li>
                                 </ul>
@@ -208,20 +210,33 @@
                     </div>
                 </div>
                 <!-- Single Widget Area -->
-                <div class="col-4">
+                <div class="col">
                     <div class="single_widget_area mb-30">
-                        <p>Memeber</p>
+                        <p>Member Centre</p>
                         <ul class="footer_widget_menu d-flex flex-column">
-                            <li><a href="#">Sign up</a></li>
-                            <li><a href="#">Sign in</a></li>
-                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Order History</a></li>
+                            <li><a href="#">Forget Password</a></li>
+                            <li><a href="#">Carts</a></li>
+                            <li><a href="#">Wishlist</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col">
+                    <div class="single_widget_area mb-30">
+                        <p>Shopping</p>
+                        <ul class="footer_widget_menu d-flex flex-column">
+                            <li><a href="#">New</a></li>
+                            <li><a href="#">Hot</a></li>
+                            <li><a href="#">Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
                     <div class="single_widget_area mb-30">
                         <p>Notice</p>
                         <ul class="footer_widget_menu d-flex flex-column">
+                            <li><a href="#">Policy</a></li>
                             <li><a href="#">Payment Options</a></li>
                             <li><a href="#">Shipping and Delivery</a></li>
                         </ul>
