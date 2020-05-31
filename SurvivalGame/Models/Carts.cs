@@ -6,21 +6,23 @@ namespace SurvivalGame.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class RelatedProducts
+    public partial class Carts
     {
         [StringLength(10)]
         public string ID { get; set; }
 
         [Required]
         [StringLength(10)]
-        public string ProductID { get; set; }
+        public string MemberID { get; set; }
 
         [Required]
         [StringLength(10)]
-        public string RelationPID { get; set; }
+        public string ProductID { get; set; }
+
+        public int Quantity { get; set; }
+
+        public virtual Members Members { get; set; }
 
         public virtual Products Products { get; set; }
-
-        public virtual Products Products1 { get; set; }
     }
 }

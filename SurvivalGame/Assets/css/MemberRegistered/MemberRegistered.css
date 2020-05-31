@@ -22,7 +22,7 @@ a {
     color: #fff;
 }
 
-.container-fluid .row {
+.container-fluid .LawArea {
     border: 1px solid #000;
     border-radius: 10px;
 }
@@ -71,6 +71,23 @@ hr {
 .BirthdayInvalid {
     position: absolute;
     top: 40px;
+}
+
+.essence-btn {
+    /*display: inline-block;
+    min-width: 170px;
+    height: 50px;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 0 40px;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 50px;
+    background-color: #dc0345;
+    letter-spacing: 1.5px;
+    font-weight: 600;*/
+    transition: 0.2s;
 }
 
 .essence-btn-login {

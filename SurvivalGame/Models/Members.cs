@@ -11,6 +11,7 @@ namespace SurvivalGame.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Members()
         {
+            Carts = new HashSet<Carts>();
             Orders = new HashSet<Orders>();
         }
 
@@ -43,6 +44,9 @@ namespace SurvivalGame.Models
         [Required]
         [StringLength(10)]
         public string Phone { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Carts> Carts { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Orders> Orders { get; set; }

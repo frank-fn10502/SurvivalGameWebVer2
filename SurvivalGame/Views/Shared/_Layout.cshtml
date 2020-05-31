@@ -25,7 +25,7 @@
     <link href="~/Assets/css/core-style.css" rel="stylesheet" />
     <link href="~/Assets/css/style.css" rel="stylesheet" />
 
-    @RenderSection("topCss" ,required: false)
+    @RenderSection("topCss", required: false)
 </head>
 <body class="p-0">
     <!-- ##### Header Area Start ##### -->
@@ -90,7 +90,7 @@
                 </div>
                 <!-- User Login Info -->
                 <div class="user-login-info">
-                    <a href="@Url.Action("MemberRegistered","member")"><img src="~/Assets/images/core-img/user.svg" alt=""></a>
+                    <a href="##"><img src="~/Assets/images/core-img/user.svg" alt=""></a>
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
@@ -285,7 +285,13 @@
     <script src="~/Assets/javaScript/classy-nav.min.js"></script>
     <script src="~/Assets/javaScript/active.js"></script>
 
-    @RenderSection("scripts" ,required: false)
-    @RenderSection("bottomJs" ,required: false)
+    <script src="~/Assets/javaScript/MemberLogin/LoginPartialView.js"></script>
+
+    @RenderSection("scripts", required: false)
+    @RenderSection("bottomJs", required: false)
+
+    @* 登入的moaal *@
+    @Html.Partial("_LoginPartialView")
+
 </body>
 </html>

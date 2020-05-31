@@ -4,10 +4,10 @@
 }
 
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <button data-toggle="modal" data-target="#Login">Login</button>
+    <div class="row section-padding-80">
+        <div class="col-12  mt-80">
 
+            <button data-toggle="modal" data-target="#Login">Login</button>
 
             <!-- Modal -->
             <div class="modal fade" id="Login" tabindex="-1" role="dialog" aria-labelledby="LoginTitle"
@@ -20,29 +20,31 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <div class="container-fluid">
-                                <div class="row LoginArea">
-                                    <form class="login100-form validate-form">
+                                <div class="row mt-30">
+                                    <form action="#" method="post" class="login100-form validate-form">
                                         <span class="login100-form-title p-b-55">
                                             Login
                                         </span>
 
                                         <div class="wrap-input100 validate-input m-b-16"
                                              data-validate="Valid email is required: ex@abc.com">
-                                            <input class="input100" type="text" name="email" placeholder="Email">
+                                            @*<input class="input100" type="text" name="email" placeholder="Email">*@
+                                            <input class="input100" type="text" name="ModalAccount" id="ModalAccount" placeholder="Account">
                                             <span class="focus-input100"></span>
                                             <span class="symbol-input100">
                                                 <span class="lnr lnr-envelope"></span>
                                             </span>
+                                            <div class="invalid-feedback AccountInvalid">帳號開頭只能為大寫或小寫英文</div>
                                         </div>
 
                                         <div class="wrap-input100 validate-input m-b-16"
                                              data-validate="Password is required">
-                                            <input class="input100" type="password" name="pass"
-                                                   placeholder="Password">
+                                            <input class="input100" type="Password" name="ModalPassword" id="ModalPassword" placeholder="Password">
                                             <span class="focus-input100"></span>
                                             <span class="symbol-input100">
                                                 <span class="lnr lnr-lock"></span>
                                             </span>
+                                            <div class="invalid-feedback PasswordInvalid">密碼格式錯誤</div>
                                         </div>
 
                                         <div class="contact100-form-checkbox m-l-4">
@@ -71,7 +73,7 @@
                                         </a>
 
                                         <a href="#" class="btn-google m-b-10">
-                                            <img src="images/icons/icon-google.png" alt="GOOGLE">
+                                            <img src="~/Assets/images/MemberLogin/icons/icon-google.png" />
                                             Google
                                         </a>
 
@@ -100,41 +102,17 @@
 </div>
 
 @section topCss{
-    @*<link href="~/Assets/css/MemberLogin/MemberLogin.css" rel="stylesheet" />*@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <img src="~/Assets/images/MemberLogin/icons/favicon.ico" />
-    <img src="~/Assets/images/MemberLogin/icons/icon-google.png" />
-
-
-    <link href="~/Assets/css/MemberLogin/animate.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <a href="~/Content/bootstrap.css.map">~/Content/bootstrap.css.map</a>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <a href="~/Content/bootstrap.min.css.map">~/Content/bootstrap.min.css.map</a>
-    <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
-    <a href="~/Content/bootstrap-grid.css.map">~/Content/bootstrap-grid.css.map</a>
-    <a href="~/Content/bootstrap-grid.min.css.map">~/Content/bootstrap-grid.min.css.map</a>
-    <link href="~/Content/bootstrap-reboot.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
-    <a href="~/Content/bootstrap-reboot.css.map">~/Content/bootstrap-reboot.css.map</a>
-    <a href="~/Content/bootstrap-reboot.min.css.map">~/Content/bootstrap-reboot.min.css.map</a>
-    <link href="~/Assets/css/MemberLogin/hamburgers.css" rel="stylesheet" />
-    <link href="~/Assets/css/MemberLogin/hamburgers.min.css" rel="stylesheet" />
-    <link href="~/Assets/css/MemberLogin/select2.css" rel="stylesheet" />
-    <link href="~/Assets/css/MemberLogin/select2.min.css" rel="stylesheet" />
+    <link href="~/Assets/fonts/MemberLogin/icon-font.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/MemberLogin/MemberLogin.css" rel="stylesheet" />
+    <link href="~/Assets/css/MemberLogin/util.css" rel="stylesheet" />
+    <link href="~/Assets/css/animate.css" rel="stylesheet" />
 }
 
 @section bottomJs
 {
-    <script src="~/Assets/javaScript/MemberLogin/main.js"></script>
-    <script src="~/Scripts/bootstrap.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/popper.js"></script>
-    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Assets/javaScript/MemberLogin/MemberLogin.js"></script>
+    <script src="~/Assets/javaScript/MemberLogin/popper.js"></script>
+    <script src="~/Assets/javaScript/MemberLogin/popper.min.js"></script>
     <script src="~/Assets/javaScript/MemberLogin/tooltip.js"></script>
-    <script src="~/Assets/javaScript/jquery-2.2.4.min.js"></script>
-    <script src="~/Assets/javaScript/MemberLogin/select2.min.js"></script>
-    <script src="~/Assets/javaScript/MemberLogin/select2.js"></script>
 }

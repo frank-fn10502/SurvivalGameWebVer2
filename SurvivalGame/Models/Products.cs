@@ -11,11 +11,13 @@ namespace SurvivalGame.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Products()
         {
+            Carts = new HashSet<Carts>();
             Imgs = new HashSet<Imgs>();
             Order_Details = new HashSet<Order_Details>();
             Procurement = new HashSet<Procurement>();
             Product_Attributes = new HashSet<Product_Attributes>();
             RelatedProducts = new HashSet<RelatedProducts>();
+            RelatedProducts1 = new HashSet<RelatedProducts>();
         }
 
         [StringLength(10)]
@@ -29,7 +31,7 @@ namespace SurvivalGame.Models
         [StringLength(150)]
         public string Name { get; set; }
 
-        [StringLength(50)]
+        [StringLength(150)]
         public string Color { get; set; }
 
         public string Depiction { get; set; }
@@ -40,6 +42,9 @@ namespace SurvivalGame.Models
 
         [Column(TypeName = "money")]
         public decimal? Price { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Carts> Carts { get; set; }
 
         public virtual Class Class { get; set; }
 
@@ -59,5 +64,8 @@ namespace SurvivalGame.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RelatedProducts> RelatedProducts { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RelatedProducts> RelatedProducts1 { get; set; }
     }
 }
