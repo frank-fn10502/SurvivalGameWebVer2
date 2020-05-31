@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SurvivalGame.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,9 @@ namespace SurvivalGame.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var service = new IndexServices();
+            var vm = service.GetProductData();
+            return View(vm);
         }
 
         public ActionResult About()

@@ -2,6 +2,40 @@
     list-style: none;
 }
 
+.form-group {
+    margin: 0;
+}
+
+#collapseTwo .card-body,
+#collapseThree .card-body {
+    padding: 0;
+}
+
+.form-check-label {
+    font-size: large;
+}
+
+.form-check {
+    width: 100%;
+    border: 1px solid #d6d8d9;
+    cursor: pointer;
+}
+
+.FromLayout {
+    border: 1px #1B6AE3 solid;
+}
+
+.btn-link,
+.btn-link:hover,
+.btn-link:focus {
+    text-decoration: none;
+    color: #000;
+}
+
+.card-header {
+    cursor: pointer;
+}
+
 .Detail div {
     font-size: large;
     border: 1px solid #eee;
@@ -96,8 +130,50 @@
         .CartContext {
             padding: 0;
         }
-        .CartContext DIV {
+
+            .CartContext DIV {
                 padding-right: 0;
-       }
+            }
+
+        .StepArea {
+            flex-wrap: wrap;
+        }
     }
 }
+
+.StepArea {
+    display: flex;
+    justify-content: center;
+}
+
+    .StepArea div {
+        position: relative;
+        text-align: center;
+        line-height: 3rem;
+        background-color: #d6d8d9;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .StepArea .active {
+        background-color: #1B6AE3;
+        font-size: 20px;
+    }
+
+    .StepArea div::after {
+        position: absolute;
+        content: '';
+        border-top: 1.5rem solid #ffffff;
+        border-left: 1.5rem solid transparent;
+        border-bottom: 1.5rem solid #ffffff;
+        right: 0;
+    }
+
+    .StepArea div::before {
+        position: absolute;
+        content: '';
+        border-top: 1.5rem solid transparent;
+        border-left: 1.5rem solid #FFF;
+        border-bottom: 1.5rem solid transparent;
+        left: 0;
+    }

@@ -7,6 +7,9 @@ namespace SurvivalGame.ViewModels.Index
 {
     public class ProductsViewModel
     {
+        public List<SortViewModel> SortList { get; set; }
+        public List<PopularViewModel> PopularList { get; set; }
+        public List<NewViewModel> NewList { get; set; }
 
     }
 }

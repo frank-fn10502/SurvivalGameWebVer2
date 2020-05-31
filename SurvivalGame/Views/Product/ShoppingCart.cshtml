@@ -19,65 +19,199 @@
 <div class="checkout_area py-5">
     <div class="container">
         <div class="row">
-<button class="btn btn-outline-danger">test</button>
-            <div class="col-12  text-center">
-                <div class="CartHeader container mt-3 alert alert-dark">
-                    <div class="row">
-                        <div class="CartProductImg col-2">商品照片</div>
-                        <div class="CartProductName col-2">商品名稱</div>
-                        <div class="CartProductBrief col-2">規格</div>
-                        <div class="CartProductPrice col-2">單價</div>
-                        <div class="CartProductCount col-1">數量</div>
-                        <div class="CartProductTotal col-2">總計</div>
-                        <div class="CartOperating col-1">操作</div>
+            <div class="col-md-12 ">
+                <div class="StepArea">
+                    <div class="col-6 mb-2 col-md-3 active" data-target="#collapseOne"><span>確認購物車</span></div>
+                    <div class="col-6 mb-2 col-md-3" data-target="#collapseTwo"><span>運送方式</span></div>
+                    <div class="col-6 mb-2 col-md-3" data-target="#collapseThree"><span>付款方式</span></div>
+                    <div class="col-6 mb-2 col-md-3" data-target="#collapseFour"><span>結帳</span></div>
+                </div>
+            </div>
+            <div class="col-12 ">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
+                             aria-expanded="true" aria-controls="collapseOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link " type="button">
+                                    確認購物車
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="CartHeader container mt-3 alert  text-center alert-dark">
+                                    <div class="row">
+                                        <div class="CartProductImg col-2">商品照片</div>
+                                        <div class="CartProductName col-2">商品名稱</div>
+                                        <div class="CartProductBrief col-2">規格</div>
+                                        <div class="CartProductPrice col-2">單價</div>
+                                        <div class="CartProductCount col-1">數量</div>
+                                        <div class="CartProductTotal col-2">總計</div>
+                                        <div class="CartOperating col-1">操作</div>
+                                    </div>
+                                </div>
+                                <!-- ---------------------------------------------------------------------------------------- -->
+                                <div class="CartItemList container mb-5">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo"
+                             aria-expanded="false" aria-controls="collapseTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button">
+                                    運送方式
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                <fieldset class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-check ShipGroup FromLayout py-3">
+                                                <input class="form-check-input InputShipGroup" type="radio"
+                                                       name="ShipgridRadios" id="ShipgridRadios1" value="option1"
+                                                       checked>
+                                                <label class="form-check-label" for="ShipgridRadios1">
+                                                    便利超商
+                                                </label>
+                                            </div>
+                                            <div class="form-check ShipGroup  py-3">
+                                                <input class="form-check-input InputShipGroup" type="radio"
+                                                       name="ShipgridRadios" id="ShipgridRadios2" value="option2">
+                                                <label class="form-check-label" for="ShipgridRadios2">
+                                                    自取
+                                                </label>
+                                            </div>
+                                            <div class="form-check ShipGroup  py-3">
+                                                <input class="form-check-input InputShipGroup" type="radio"
+                                                       name="ShipgridRadios" id="ShipgridRadios3" value="option3">
+                                                <label class="form-check-label" for="ShipgridRadios3">
+                                                    宅配
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree" data-toggle="collapse"
+                             data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button">
+                                    付款方式
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                <fieldset class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-check PaymentGroup FromLayout py-3">
+                                                <input class="form-check-input InputPaymentGroup" type="radio"
+                                                       name="gridRadios" id="gridRadios1" value="option1" checked>
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    貨到付款
+                                                </label>
+                                            </div>
+                                            <div class="form-check PaymentGroup  py-3">
+                                                <input class="form-check-input InputPaymentGroup" type="radio"
+                                                       name="gridRadios" id="gridRadios2" value="option2">
+                                                <label class="form-check-label" for="gridRadios2">
+                                                    信用卡
+                                                </label>
+                                            </div>
+                                            <div class="form-check PaymentGroup  py-3">
+                                                <input class="form-check-input InputPaymentGroup" type="radio"
+                                                       name="gridRadios" id="gridRadios3" value="option3">
+                                                <label class="form-check-label" for="gridRadios3">
+                                                    ATM付款
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour" data-toggle="collapse" data-target="#collapseFour"
+                             aria-expanded="false" aria-controls="collapseFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button">
+                                    結帳
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="input-group mb-3">
+                                            <div class="input                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           -group-prepend">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect01">運送方式</label>
+
+                                            </div>
+                                            <label for="" class="input-group-text"
+                                                   id="inputGroupSelect01">便利商店</label>
+                                            <!-- <select class="Custom" id="inputGroupSelect01">
+                                                <option value="1">便利商店</option>
+                                                <option value="2">自取</option>
+                                                <option value="3">宅配</option>
+                                            </select> -->
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text"
+                                                       for="inputGroupSelect02">付費方式</label>
+                                            </div>
+                                            <label for="" class="input-group-text"
+                                                   id="inputGroupSelect02">貨到付款</label>
+                                            <!-- <select class="Custom" id="inputGroupSelect02" disabled>
+                                                <option value="1">貨到付款</option>
+                                                <option value="2">ATM繳費</option>
+                                                <option value="3">信用卡</option>
+                                            </select> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 text-right Detail col-12 col-md-6 offset-lg-3">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-auto">商品總金額</div>
+                                                <div class="col">XXX元</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-auto">運費總金額</div>
+                                                <div class="col">XXX元</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-auto">總付款金額</div>
+                                                <div class="col">XXX元</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- ---------------------------------------------------------------------------------------- -->
-                <div class="CartItemList container mb-5">
-                </div>
+                <button class="btn btn-outline-danger">test</button>
 
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">運送方式</label>
-                    </div>
-                    <select class="Custom" id="inputGroupSelect01">
-                        <option value="1">便利商店</option>
-                        <option value="2">郵局</option>
-                        <option value="3">宅配</option>
-                    </select>
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect02">付費方式</label>
-                    </div>
-                    <select class="Custom" id="inputGroupSelect02">
-                        <option value="1">貨到付款</option>
-                        <option value="2">ATM繳費</option>
-                        <option value="3">信用卡</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-lg-3 text-right Detail col-12 col-md-6 offset-lg-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-auto">商品總金額</div>
-                        <div class="col">XXX元</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-auto">運費總金額</div>
-                        <div class="col">XXX元</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-auto">總付款金額</div>
-                        <div class="col">XXX元</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="row mt-4">
             <div class="col-6 ">
                 <button type="button" class="btn btn-outline-secondary">回首頁</button>
@@ -231,6 +365,6 @@
 }
 @section bottomJs
 {
-    
+
     <script src="~/Assets/javaScript/ShoppingCarts/ShoppingCart.js"></script>
 }
