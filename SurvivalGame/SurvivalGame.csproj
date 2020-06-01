@@ -258,6 +258,7 @@
     <Content Include="Assets\images\Apparel\Reebok Dauntless - RB8827\02.jpg" />
     <Content Include="Assets\images\Apparel\Reebok Dauntless - RB8827\03.jpg" />
     <Content Include="Assets\images\background.jpg" />
+    <Content Include="Assets\images\bg-img\AboutUs.jpg" />
     <Content Include="Assets\images\bg-img\bg-1.jpg" />
     <Content Include="Assets\images\bg-img\bg-2.jpg" />
     <Content Include="Assets\images\bg-img\bg-3.jpg" />
@@ -276,6 +277,7 @@
     <Content Include="Assets\images\bg-img\blog6.jpg" />
     <Content Include="Assets\images\bg-img\breadcumb.jpg" />
     <Content Include="Assets\images\bg-img\breadcumb2.jpg" />
+    <Content Include="Assets\images\bg-img\ContactUs.jpg" />
     <Content Include="Assets\images\bg-img\rp1.jpg" />
     <Content Include="Assets\images\bg-img\rp2.jpg" />
     <Content Include="Assets\images\bg-img\rp3.jpg" />
