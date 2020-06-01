@@ -28,3 +28,39 @@
         }
     }
 }
+.user-login-info
+{
+    .dropdown-menu
+    {
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+        left: auto;
+        right: 0;
+        .dropdown-item:active {
+            color: #fff;
+            text-decoration: none;
+            background-color: #ccc;
+        }
+        img{
+            width: 40px;
+            height: auto;
+            margin-right: 5px;
+            display: block;
+        }
+        p{
+            // display: block;
+            display: flex;
+        }
+        span{
+            line-height: 40px;
+            display: block;
+            a{
+                display: inline;
+                margin: 0 5px;
+                line-height: 40px;
+            }
+        }
+    }
+}

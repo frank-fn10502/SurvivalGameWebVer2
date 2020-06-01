@@ -91,8 +91,20 @@
                     <a href="#"><img src="~/Assets/images/core-img/heart.svg" alt=""></a>
                 </div>
                 <!-- User Login Info -->
-                <div class="user-login-info">
-                    <a href="##"><img src="~/Assets/images/core-img/user.svg" alt=""></a>
+                <div class="user-login-info dropdown">
+                    <a href="#">
+                        <img src="~/Assets/images/core-img/user.svg" alt="">
+                    </a>
+                    <div id="accountId" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-item">
+                            <img src="~/Assets/images/core-img/user.svg" alt="">
+                            <p class="accountName">
+                                <span>this is a test account</span>
+                                <span>(<a href="#">logout</a>)</span>
+                            </p>
+                            
+                        </div>
+                    </div>
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
@@ -288,6 +300,8 @@
             </div> -->
         </div>
     </footer>
+    @Html.Partial("_LoginPartialView")
+
     <!-- ##### Footer Area End ##### -->
     @*@Scripts.Render("~/bundles/jquery")*@
     <script src="~/Assets/javaScript/jquery-2.2.4.min.js"></script>
@@ -301,12 +315,17 @@
     <script src="~/Assets/javaScript/active.js"></script>
 
     <script src="~/Assets/javaScript/MemberLogin/LoginPartialView.js"></script>
+    <script>
+        var checkLoginUrl = "@Url.Action("CheckLoginStatus" ,"Member")";
+    </script>
 
-    @RenderSection("scripts", required: false)
-    @RenderSection("bottomJs", required: false)
+    <script src="~/Assets/javaScript/_Layout/_Layout.js"></script>
+    @RenderSection("scripts" ,required: false)
+    @RenderSection("bottomJs" ,required: false)
+
 
     @* 登入的moaal *@
-    @Html.Partial("_LoginPartialView")
+
 
 </body>
 </html>
