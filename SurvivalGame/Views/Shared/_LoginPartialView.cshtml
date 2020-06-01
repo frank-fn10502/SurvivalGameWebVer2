@@ -1,5 +1,5 @@
 ﻿<link href="~/Assets/fonts/MemberLogin/icon-font.min.css" rel="stylesheet" />
-<link href="~/Assets/css/MemberLogin/MemberLogin.css" rel="stylesheet" />
+<link href="~/Assets/css/MemberLogin/LoginPartialView.css" rel="stylesheet" />
 <link href="~/Assets/css/MemberLogin/util.css" rel="stylesheet" />
 <link href="~/Assets/css/animate.css" rel="stylesheet" />
 
@@ -22,7 +22,7 @@
                                 Login
                             </span>
 
-                            <div class="wrap-input100 validate-input m-b-16"
+                            <div class="wrap-input100 validate-input"
                                  data-validate="Valid email is required: ex@abc.com">
                                 @*<input class="input100" type="text" name="email" placeholder="Email">*@
                                 <input class="input100 ModalAccount" type="text" name="ModalAccount" id="" placeholder="Account">
@@ -30,20 +30,20 @@
                                 <span class="symbol-input100">
                                     <span class="lnr lnr-envelope"></span>
                                 </span>
-                                <div class="invalid-feedback ModalAccountInvalid">帳號格式錯誤</div>
                             </div>
+                            <div class="invalid-feedback ModalAccountInvalid">帳號開頭只能為大寫或小寫英文</div>
 
-                            <div class="wrap-input100 validate-input m-b-16"
+                            <div class="wrap-input100 validate-input m-t-16"
                                  data-validate="Password is required">
                                 <input class="input100 ModalPassword" type="Password" name="ModalPassword" id="" placeholder="Password">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
                                     <span class="lnr lnr-lock"></span>
                                 </span>
-                                <div class="invalid-feedback ModalPasswordInvalid">密碼格式錯誤</div>
                             </div>
+                            <div class="invalid-feedback ModalPasswordInvalid">密碼格式錯誤</div>
 
-                            <div class="contact100-form-checkbox m-l-4">
+                            <div class="contact100-form-checkbox m-l-4 m-t-25">
                                 <input class="input-checkbox100" id="ckb1" type="checkbox"
                                        name="remember-me">
                                 <label class="label-checkbox100" for="ckb1">

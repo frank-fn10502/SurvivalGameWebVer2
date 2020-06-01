@@ -299,6 +299,7 @@
     <Content Include="Assets\css\jquery-ui.min.css" />
     <Content Include="Assets\css\magnific-popup.css" />
     <Content Include="Assets\css\MemberCentre\member.css" />
+    <Content Include="Assets\css\MemberLogin\LoginPartialView.css" />
     <Content Include="Assets\css\MemberLogin\MemberLogin.css" />
     <Content Include="Assets\css\MemberLogin\util.css" />
     <Content Include="Assets\css\MemberRegistered\MemberRegistered.css" />
@@ -367,6 +368,7 @@
     <Content Include="Assets\images\Apparel\PD049\02.jpg" />
     <Content Include="Assets\images\Apparel\PD050\01.jpg" />
     <Content Include="Assets\images\background.jpg" />
+    <Content Include="Assets\images\bg-img\AboutUs.jpg" />
     <Content Include="Assets\images\bg-img\bg-1.jpg" />
     <Content Include="Assets\images\bg-img\bg-2.jpg" />
     <Content Include="Assets\images\bg-img\bg-3.jpg" />
@@ -385,6 +387,7 @@
     <Content Include="Assets\images\bg-img\blog6.jpg" />
     <Content Include="Assets\images\bg-img\breadcumb.jpg" />
     <Content Include="Assets\images\bg-img\breadcumb2.jpg" />
+    <Content Include="Assets\images\bg-img\ContactUs.jpg" />
     <Content Include="Assets\images\bg-img\rp1.jpg" />
     <Content Include="Assets\images\bg-img\rp2.jpg" />
     <Content Include="Assets\images\bg-img\rp3.jpg" />
@@ -473,6 +476,7 @@
     <Content Include="Assets\images\Magazine\PD020\03.jpg" />
     <Content Include="Assets\images\MemberLogin\icons\favicon.ico" />
     <Content Include="Assets\images\MemberLogin\icons\icon-google.png" />
+    <Content Include="Assets\images\MemberLogin\img-01.png" />
     <Content Include="Assets\images\product-img\product-1.jpg" />
     <Content Include="Assets\images\product-img\product-2.jpg" />
     <Content Include="Assets\images\product-img\product-3.jpg" />

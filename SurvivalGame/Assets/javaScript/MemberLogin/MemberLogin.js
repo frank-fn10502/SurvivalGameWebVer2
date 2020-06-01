@@ -57,14 +57,14 @@
 //})(jQuery);
 
 
-var Account = document.getElementById("ModalAccount");
+var Account = document.getElementById("LoginAccount");
 var rule_account = /^[a-zA-Z_]\w*$/;
 
-var Password = document.getElementById("ModalPassword");
+var Password = document.getElementById("LoginPassword");
 var rule_password = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,35}$/;
 
-var AccountInvalid = document.querySelector(".ModalAccountInvalid");
-var PasswordInvalid = document.querySelector(".ModalPasswordInvalid");
+var AccountInvalid = document.querySelector(".AccountInvalid");
+var PasswordInvalid = document.querySelector(".PasswordInvalid");
 
 var LoginButton = document.querySelector(".login100-form-btn");
 //var InvalidFeedback = document.querySelectorAll(".invalid-feedback");
