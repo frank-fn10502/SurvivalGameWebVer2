@@ -512,6 +512,7 @@
     <Content Include="Assets\javaScript\productMenu\ExteriorHelper.js" />
     <Content Include="Assets\javaScript\productMenu\shop.js" />
     <Content Include="Assets\javaScript\ShoppingCarts\ShoppingCart.js" />
+    <Content Include="Assets\javaScript\_Layout\_Layout.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
