@@ -53,12 +53,126 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="jose-jwt, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jose-jwt.2.5.0\lib\net461\jose-jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authentication.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authentication.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authentication.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authentication.Core.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authorization, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authorization.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authorization.Policy, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authorization.Policy.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Server.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Extensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Extensions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.ResponseCaching.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.ResponseCaching.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Routing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Routing.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.WebUtilities, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.WebUtilities.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.WebUtilities.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.DotNet.PlatformAbstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.DotNet.PlatformAbstractions.2.1.0\lib\net45\Microsoft.DotNet.PlatformAbstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyModel.2.1.0\lib\net451\Microsoft.Extensions.DependencyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.ObjectPool.2.2.0\lib\netstandard2.0\Microsoft.Extensions.ObjectPool.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -133,9 +247,11 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Filter\JwtAuthActionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Carts.cs" />
     <Compile Include="Models\Catagory.cs" />
     <Compile Include="Models\Class.cs" />
     <Compile Include="Models\Imgs.cs" />
@@ -153,14 +269,18 @@
     <Compile Include="Repository\IndexRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\SGRepository.cs" />
+    <Compile Include="Security\JwtAuthUtil.cs" />
     <Compile Include="Services\IndexServices.cs" />
     <Compile Include="Services\ProductMenuService.cs" />
+    <Compile Include="ViewModels\MemberLogin\MemberLoginViewModel.cs" />
+    <Compile Include="ViewModels\MemberRegistered\MemberRegisteredViewModel.cs" />
     <Compile Include="ViewModels\Index\NewViewModel.cs" />
     <Compile Include="ViewModels\Index\PopularViewModel.cs" />
     <Compile Include="ViewModels\Index\SortViewModel.cs" />
     <Compile Include="ViewModels\Index\ProductsViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\AttributesViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\CatagoryViewModel.cs" />
+    <Compile Include="ViewModels\ProductMenu\Color.cs" />
     <Compile Include="ViewModels\ProductMenu\ColorItemViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\ColorViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\NormalViewModel.cs" />
@@ -179,14 +299,9 @@
     <Content Include="Assets\css\font-awesome.min.css" />
     <Content Include="Assets\css\jquery-ui.min.css" />
     <Content Include="Assets\css\magnific-popup.css" />
-    <Content Include="Assets\css\MemberLogin\animate.css" />
-    <Content Include="Assets\css\MemberLogin\hamburgers.css" />
-    <Content Include="Assets\css\MemberLogin\hamburgers.min.css" />
-    <Content Include="Assets\css\MemberLogin\main.css" />
     <Content Include="Assets\css\MemberCentre\member.css" />
+    <Content Include="Assets\css\MemberLogin\LoginPartialView.css" />
     <Content Include="Assets\css\MemberLogin\MemberLogin.css" />
-    <Content Include="Assets\css\MemberLogin\select2.css" />
-    <Content Include="Assets\css\MemberLogin\select2.min.css" />
     <Content Include="Assets\css\MemberLogin\util.css" />
     <Content Include="Assets\css\MemberRegistered\MemberRegistered.css" />
     <Content Include="Assets\css\nice-select.css" />
@@ -197,16 +312,10 @@
     <Content Include="Assets\css\productMenu\shop.css" />
     <Content Include="Assets\css\ShoppingCart\ShoppingCart.css" />
     <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\css\_Layout\layout.css" />
     <Content Include="Assets\fonts\classy.svg" />
     <Content Include="Assets\fonts\fontawesome-webfont.svg" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\css\font-awesome.css" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\css\font-awesome.min.css" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\HELP-US-OUT.txt" />
-    <Content Include="Assets\fonts\MemberLogin\Linearicons-Free-v1.0.0\icon-font.min.css" />
-    <Content Include="Assets\fonts\MemberLogin\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\OFL.txt" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\OFL.txt" />
+    <Content Include="Assets\fonts\MemberLogin\icon-font.min.css" />
     <Content Include="Assets\images\1.jpg" />
     <Content Include="Assets\images\2.jpg" />
     <Content Include="Assets\images\3.jpg" />
@@ -214,52 +323,53 @@
     <Content Include="Assets\images\5.jpg" />
     <Content Include="Assets\images\6.jpg" />
     <Content Include="Assets\images\7.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\Aim Green Biodegradable Airsoft BBS .25g - Pellets - 6mm 10,000 Rounds - Smooth Finish BBS\01.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\Aim Green Biodegradable Airsoft BBS .25g - Pellets - 6mm 10,000 Rounds - Smooth Finish BBS\02.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\Aim Green Biodegradable Airsoft BBS .25g - Pellets - 6mm 10,000 Rounds - Smooth Finish BBS\03.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\Air Venturi Pro CQBBs 6mm Airsoft BBS, 0.20g, 2,700 RDS, White\01.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\Airsoft BBS 0.12g 6mm 2000 Rounds with an resealable Plastic Bottle&amp; an Easy-Pour spout,Yellow Airsoft pellets\01.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\Airsoft BBS 0.12g 6mm 2000 Rounds with an resealable Plastic Bottle&amp; an Easy-Pour spout,Yellow Airsoft pellets\02.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\Airsoft BBS 0.12g 6mm 2000 Rounds with an resealable Plastic Bottle&amp; an Easy-Pour spout,Yellow Airsoft pellets\03.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\ASG Blaster Devil BBs 0.2 Gram, 3000 Rounds - Airsoft Ammo\01.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\Colt Competition .12 g 6mm Green BBs\01.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\Crosman 6mm biodegradable airsoft BBs, 0.20g, 2000 rds, white\01.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\CURSED Asg Series Bb%27s 0.25g 1kg 4000 Bb%27s White 6mm Pellets Airsoft\01.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\DAISY PREMIUM ZINC PLATED STEEL BBS\01.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\DARK SNIPER 0.36 BB PELLETS 2000\01.jpg" />
-    <Content Include="Assets\images\Accessories\BBs\GameFace ASP512 Premier .12-Gram Red Airsoft BBs %285000-Count%29\01.jpg" />
-    <Content Include="Assets\images\Accessories\GasTank\First Strike Myth HP System Aluminum Tank w Merc Regulator and 4-Port Regulator %28Size 10 Ci  3000 PSI%29\01.jpg" />
-    <Content Include="Assets\images\Accessories\GasTank\First Strike Myth HP System Aluminum Tank w Merc Regulator and 4-Port Regulator %28Size 26 Ci  3000 PSI%29\01.jpg" />
-    <Content Include="Assets\images\Accessories\GasTank\First Strike Myth HP System Aluminum Tank w Merc Regulator and 4-Port Regulator %28Size 38 Ci  3000 PSI%29\01.jpg" />
-    <Content Include="Assets\images\Accessories\GasTank\First Strike Myth HP System Aluminum Tank w Merc Regulator and 4-Port Regulator%28Size 48 Ci  3000 PSI%29\01.jpg" />
-    <Content Include="Assets\images\Accessories\GasTank\Ninja 4500 HPA System Carbon Fiber Tank w Ninja Pro V2 SLP Regulator %28Size 68 Cubic Inches%29\01.jpg" />
-    <Content Include="Assets\images\Accessories\GasTank\Ninja Paintball 133000 HPA System Air Tank w Ninja Pro V2 %28Color Black%29\01.jpg" />
-    <Content Include="Assets\images\Accessories\GasTank\Valken Paintball 26ci3000 HPA Air Tank with DOT-TC\01.jpg" />
-    <Content Include="Assets\images\Accessories\GasTank\Valken Riot ZERO-G 684500 Air Tank %28Color Black%29\01.jpg" />
-    <Content Include="Assets\images\Accessories\GasTank\Valken Zero-G Lightweight 684500 HPA Air Tank with DOT-TC Regulator %28Color Aloha%29\01.jpg" />
-    <Content Include="Assets\images\Accessories\GasTank\Valken Zero-G Lightweight 684500 HPA Air Tank with DOT-TC Regulator %28Color Flag%29\01.jpg" />
-    <Content Include="Assets\images\Apparel\5.11 Logo T-Shirt Black 40050S\01.jpg" />
-    <Content Include="Assets\images\Apparel\5.11 NEW Khaki Taclite Pro Vest 80008\01.jpg" />
-    <Content Include="Assets\images\Apparel\5.11 NEW Khaki Taclite Pro Vest 80008\02.jpg" />
-    <Content Include="Assets\images\Apparel\5.11 NEW Khaki Taclite Pro Vest 80008\03.jpg" />
-    <Content Include="Assets\images\Apparel\5.11 Rapid Assault Shirt Multicam 72185\01.jpg" />
-    <Content Include="Assets\images\Apparel\5.11 Rapid Assault Shirt Multicam 72185\02.jpg" />
-    <Content Include="Assets\images\Apparel\5.11 Rapid Assault Shirt Multicam 72185\03.jpg" />
-    <Content Include="Assets\images\Apparel\Beyond A6 Rain Pant\01.jpg" />
-    <Content Include="Assets\images\Apparel\Beyond A6 Rain Pant\02.jpg" />
-    <Content Include="Assets\images\Apparel\Beyond A6 Rain Pant\03.jpg" />
-    <Content Include="Assets\images\Apparel\CONDOR EXO PLATE CARRIER GEN II\01.jpg" />
-    <Content Include="Assets\images\Apparel\ESS Profile Turbofan Goggles\01.jpg" />
-    <Content Include="Assets\images\Apparel\ESS Profile Turbofan Goggles\02.jpg" />
-    <Content Include="Assets\images\Apparel\First Tactical Medium Duty Glove\01.jpg" />
-    <Content Include="Assets\images\Apparel\First Tactical Medium Duty Glove\02.jpg" />
-    <Content Include="Assets\images\Apparel\First Tactical Medium Duty Glove\03.jpg" />
-    <Content Include="Assets\images\Apparel\HKTG100300- HARD KNUCKLE TACTICAL GLOVE\01.jpg" />
-    <Content Include="Assets\images\Apparel\Jlong M88 Helmet Outdoor Helmet Solid Color for Paintball Game CS Game Airsoft Game Survival Game\01.jpg" />
-    <Content Include="Assets\images\Apparel\Reebok Dauntless - RB8827\01.jpg" />
-    <Content Include="Assets\images\Apparel\Reebok Dauntless - RB8827\02.jpg" />
-    <Content Include="Assets\images\Apparel\Reebok Dauntless - RB8827\03.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD031\01.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD032\01.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD033\01.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD034\01.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD035\01.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD036\01.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD036\02.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD036\03.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD037\01.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD038\01.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD038\02.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD038\03.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD039\01.jpg" />
+    <Content Include="Assets\images\Accessories\BBs\PD040\01.jpg" />
+    <Content Include="Assets\images\Accessories\GasTank\PD021\01.jpg" />
+    <Content Include="Assets\images\Accessories\GasTank\PD022\01.jpg" />
+    <Content Include="Assets\images\Accessories\GasTank\PD023\01.jpg" />
+    <Content Include="Assets\images\Accessories\GasTank\PD024\01.jpg" />
+    <Content Include="Assets\images\Accessories\GasTank\PD025\01.jpg" />
+    <Content Include="Assets\images\Accessories\GasTank\PD026\01.jpg" />
+    <Content Include="Assets\images\Accessories\GasTank\PD027\01.jpg" />
+    <Content Include="Assets\images\Accessories\GasTank\PD028\01.jpg" />
+    <Content Include="Assets\images\Accessories\GasTank\PD029\01.jpg" />
+    <Content Include="Assets\images\Accessories\GasTank\PD030\01.jpg" />
+    <Content Include="Assets\images\Apparel\PD041\01.jpg" />
+    <Content Include="Assets\images\Apparel\PD042\01.jpg" />
+    <Content Include="Assets\images\Apparel\PD042\02.jpg" />
+    <Content Include="Assets\images\Apparel\PD042\03.jpg" />
+    <Content Include="Assets\images\Apparel\PD043\01.jpg" />
+    <Content Include="Assets\images\Apparel\PD043\02.jpg" />
+    <Content Include="Assets\images\Apparel\PD043\03.jpg" />
+    <Content Include="Assets\images\Apparel\PD044\01.jpg" />
+    <Content Include="Assets\images\Apparel\PD045\01.jpg" />
+    <Content Include="Assets\images\Apparel\PD045\02.jpg" />
+    <Content Include="Assets\images\Apparel\PD045\03.jpg" />
+    <Content Include="Assets\images\Apparel\PD046\01.jpg" />
+    <Content Include="Assets\images\Apparel\PD047\01.jpg" />
+    <Content Include="Assets\images\Apparel\PD047\02.jpg" />
+    <Content Include="Assets\images\Apparel\PD047\03.jpg" />
+    <Content Include="Assets\images\Apparel\PD048\01.jpg" />
+    <Content Include="Assets\images\Apparel\PD048\02.jpg" />
+    <Content Include="Assets\images\Apparel\PD048\03.jpg" />
+    <Content Include="Assets\images\Apparel\PD049\01.jpg" />
+    <Content Include="Assets\images\Apparel\PD049\02.jpg" />
+    <Content Include="Assets\images\Apparel\PD050\01.jpg" />
     <Content Include="Assets\images\background.jpg" />
+    <Content Include="Assets\images\bg-img\AboutUs.jpg" />
     <Content Include="Assets\images\bg-img\bg-1.jpg" />
     <Content Include="Assets\images\bg-img\bg-2.jpg" />
     <Content Include="Assets\images\bg-img\bg-3.jpg" />
@@ -278,6 +388,7 @@
     <Content Include="Assets\images\bg-img\blog6.jpg" />
     <Content Include="Assets\images\bg-img\breadcumb.jpg" />
     <Content Include="Assets\images\bg-img\breadcumb2.jpg" />
+    <Content Include="Assets\images\bg-img\ContactUs.jpg" />
     <Content Include="Assets\images\bg-img\rp1.jpg" />
     <Content Include="Assets\images\bg-img\rp2.jpg" />
     <Content Include="Assets\images\bg-img\rp3.jpg" />
@@ -306,66 +417,67 @@
     <Content Include="Assets\images\core-img\search.svg" />
     <Content Include="Assets\images\core-img\user.svg" />
     <Content Include="Assets\images\core-img\view.svg" />
-    <Content Include="Assets\images\Gun\CYBERGUN THOMPSON M1A1 GBB SMG\01.jpg" />
-    <Content Include="Assets\images\Gun\CYBERGUN THOMPSON M1A1 GBB SMG\02.jpg" />
-    <Content Include="Assets\images\Gun\CYBERGUN THOMPSON M1A1 GBB SMG\03.jpg" />
-    <Content Include="Assets\images\Gun\GHK AKM GBB Rifle\01.jpg" />
-    <Content Include="Assets\images\Gun\GHK AKM GBB Rifle\02.jpg" />
-    <Content Include="Assets\images\Gun\GHK AKM GBB Rifle\03.jpg" />
-    <Content Include="Assets\images\Gun\GHK AKM GIMS GBB Rifle\01.jpg" />
-    <Content Include="Assets\images\Gun\GHK AKM GIMS GBB Rifle\02.jpg" />
-    <Content Include="Assets\images\Gun\GHK AKM GIMS GBB Rifle\03.jpg" />
-    <Content Include="Assets\images\Gun\KJ WORKS M4 CQB GBB Rifle %28Tanio Koba%29\01.jpg" />
-    <Content Include="Assets\images\Gun\KJ WORKS M4 CQB GBB Rifle %28Tanio Koba%29\02.jpg" />
-    <Content Include="Assets\images\Gun\KJ WORKS M4 CQB GBB Rifle %28Tanio Koba%29\03.jpg" />
-    <Content Include="Assets\images\Gun\KSC M4 RIS GBB Rifle（Ver 2）\01.jpg" />
-    <Content Include="Assets\images\Gun\KSC M4 RIS GBB Rifle（Ver 2）\02.jpg" />
-    <Content Include="Assets\images\Gun\KSC M4 RIS GBB Rifle（Ver 2）\03.jpg" />
-    <Content Include="Assets\images\Gun\KWA KRISS Vector GBB SMG %28Black%29\01.jpg" />
-    <Content Include="Assets\images\Gun\KWA KRISS Vector GBB SMG %28Black%29\02.jpg" />
-    <Content Include="Assets\images\Gun\KWA KRISS Vector GBB SMG %28Black%29\03.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI HOWA TYPE 89 JGSDF GBB Rifle %28Z System%29\01.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI HOWA TYPE 89 JGSDF GBB Rifle %28Z System%29\02.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI HOWA TYPE 89 JGSDF GBB Rifle %28Z System%29\03.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI M4 CQB-R SOPMOD EBB Rifle\01.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI M4 CQB-R SOPMOD EBB Rifle\02.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI M4 CQB-R SOPMOD EBB Rifle\03.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI M4A1 MWS GBB Rifle %28Z System%29\01.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI M4A1 MWS GBB Rifle %28Z System%29\02.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI M4A1 MWS GBB Rifle %28Z System%29\03.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI MTR16 GBB Rifle %28Z System%29\01.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI MTR16 GBB Rifle %28Z System%29\02.jpg" />
-    <Content Include="Assets\images\Gun\TOKYO MARUI MTR16 GBB Rifle %28Z System%29\03.jpg" />
-    <Content Include="Assets\images\Magazine\CYBERGUN THOMPSON M1A1 30RD Gas Magazine\01.jpg" />
-    <Content Include="Assets\images\Magazine\CYBERGUN THOMPSON M1A1 30RD Gas Magazine\02.jpg" />
-    <Content Include="Assets\images\Magazine\CYBERGUN THOMPSON M1A1 30RD Gas Magazine\03.jpg" />
-    <Content Include="Assets\images\Magazine\CYBERGUN THOMPSON M1A1 50RD Gas Magazine\01.jpg" />
-    <Content Include="Assets\images\Magazine\CYBERGUN THOMPSON M1A1 50RD Gas Magazine\02.jpg" />
-    <Content Include="Assets\images\Magazine\CYBERGUN THOMPSON M1A1 50RD Gas Magazine\03.jpg" />
-    <Content Include="Assets\images\Magazine\GHK AKM 40RD GBB Magazine %28GAS%29\01.jpg" />
-    <Content Include="Assets\images\Magazine\GHK AKM 40RD GBB Magazine %28GAS%29\02.jpg" />
-    <Content Include="Assets\images\Magazine\GHK AKM 40RD GBB Magazine %28GAS%29\03.jpg" />
-    <Content Include="Assets\images\Magazine\KSC M4 40RD GBB Magazine\01.jpg" />
-    <Content Include="Assets\images\Magazine\KSC M4 40RD GBB Magazine\02.jpg" />
-    <Content Include="Assets\images\Magazine\KWA KRISS Vector 22RD GBB Magazine %28Black%29\01.jpg" />
-    <Content Include="Assets\images\Magazine\KWA KRISS Vector 22RD GBB Magazine %28Black%29\02.jpg" />
-    <Content Include="Assets\images\Magazine\KWA KRISS Vector 22RD GBB Magazine %28Black%29\03.jpg" />
-    <Content Include="Assets\images\Magazine\KWA KRISS Vector 49RD GBB Magazine %28Tan%29\01.jpg" />
-    <Content Include="Assets\images\Magazine\KWA KRISS Vector 49RD GBB Magazine %28Tan%29\02.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI HOWA TYPE 89 35RD GAS Magazine\01.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI HOWA TYPE 89 35RD GAS Magazine\02.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI HOWA TYPE 89 35RD GAS Magazine\03.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI M4 82RD AEG Magazine %28Next Gen, Black%29\01.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI M4 82RD AEG Magazine %28Next Gen, Black%29\02.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI M4 82RD AEG Magazine %28Next Gen, Black%29\03.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI MP7A1 GBB SMG 40RD Magazine\01.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI MP7A1 GBB SMG 40RD Magazine\02.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI MP7A1 GBB SMG 40RD Magazine\03.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI SCAR-L 82RD AEG Magazine %28Next Gen, Tan%29\01.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI SCAR-L 82RD AEG Magazine %28Next Gen, Tan%29\02.jpg" />
-    <Content Include="Assets\images\Magazine\TOKYO MARUI SCAR-L 82RD AEG Magazine %28Next Gen, Tan%29\03.jpg" />
+    <Content Include="Assets\images\Gun\PD001\01.jpg" />
+    <Content Include="Assets\images\Gun\PD001\02.jpg" />
+    <Content Include="Assets\images\Gun\PD001\03.jpg" />
+    <Content Include="Assets\images\Gun\PD002\01.jpg" />
+    <Content Include="Assets\images\Gun\PD002\02.jpg" />
+    <Content Include="Assets\images\Gun\PD002\03.jpg" />
+    <Content Include="Assets\images\Gun\PD003\01.jpg" />
+    <Content Include="Assets\images\Gun\PD003\02.jpg" />
+    <Content Include="Assets\images\Gun\PD003\03.jpg" />
+    <Content Include="Assets\images\Gun\PD004\01.jpg" />
+    <Content Include="Assets\images\Gun\PD004\02.jpg" />
+    <Content Include="Assets\images\Gun\PD004\03.jpg" />
+    <Content Include="Assets\images\Gun\PD005\01.jpg" />
+    <Content Include="Assets\images\Gun\PD005\02.jpg" />
+    <Content Include="Assets\images\Gun\PD005\03.jpg" />
+    <Content Include="Assets\images\Gun\PD006\01.jpg" />
+    <Content Include="Assets\images\Gun\PD006\02.jpg" />
+    <Content Include="Assets\images\Gun\PD006\03.jpg" />
+    <Content Include="Assets\images\Gun\PD007\01.jpg" />
+    <Content Include="Assets\images\Gun\PD007\02.jpg" />
+    <Content Include="Assets\images\Gun\PD007\03.jpg" />
+    <Content Include="Assets\images\Gun\PD008\01.jpg" />
+    <Content Include="Assets\images\Gun\PD008\02.jpg" />
+    <Content Include="Assets\images\Gun\PD008\03.jpg" />
+    <Content Include="Assets\images\Gun\PD009\01.jpg" />
+    <Content Include="Assets\images\Gun\PD009\02.jpg" />
+    <Content Include="Assets\images\Gun\PD009\03.jpg" />
+    <Content Include="Assets\images\Gun\PD010\01.jpg" />
+    <Content Include="Assets\images\Gun\PD010\02.jpg" />
+    <Content Include="Assets\images\Gun\PD010\03.jpg" />
+    <Content Include="Assets\images\Magazine\PD011\01.jpg" />
+    <Content Include="Assets\images\Magazine\PD011\02.jpg" />
+    <Content Include="Assets\images\Magazine\PD011\03.jpg" />
+    <Content Include="Assets\images\Magazine\PD012\01.jpg" />
+    <Content Include="Assets\images\Magazine\PD012\02.jpg" />
+    <Content Include="Assets\images\Magazine\PD012\03.jpg" />
+    <Content Include="Assets\images\Magazine\PD013\01.jpg" />
+    <Content Include="Assets\images\Magazine\PD013\02.jpg" />
+    <Content Include="Assets\images\Magazine\PD013\03.jpg" />
+    <Content Include="Assets\images\Magazine\PD014\01.jpg" />
+    <Content Include="Assets\images\Magazine\PD014\02.jpg" />
+    <Content Include="Assets\images\Magazine\PD014\03.jpg" />
+    <Content Include="Assets\images\Magazine\PD015\01.jpg" />
+    <Content Include="Assets\images\Magazine\PD015\02.jpg" />
+    <Content Include="Assets\images\Magazine\PD016\01.jpg" />
+    <Content Include="Assets\images\Magazine\PD016\02.jpg" />
+    <Content Include="Assets\images\Magazine\PD017\01.jpg" />
+    <Content Include="Assets\images\Magazine\PD017\02.jpg" />
+    <Content Include="Assets\images\Magazine\PD017\03.jpg" />
+    <Content Include="Assets\images\Magazine\PD018\01.jpg" />
+    <Content Include="Assets\images\Magazine\PD018\02.jpg" />
+    <Content Include="Assets\images\Magazine\PD018\03.jpg" />
+    <Content Include="Assets\images\Magazine\PD019\01.jpg" />
+    <Content Include="Assets\images\Magazine\PD019\02.jpg" />
+    <Content Include="Assets\images\Magazine\PD019\03.jpg" />
+    <Content Include="Assets\images\Magazine\PD020\01.jpg" />
+    <Content Include="Assets\images\Magazine\PD020\02.jpg" />
+    <Content Include="Assets\images\Magazine\PD020\03.jpg" />
     <Content Include="Assets\images\MemberLogin\icons\favicon.ico" />
     <Content Include="Assets\images\MemberLogin\icons\icon-google.png" />
+    <Content Include="Assets\images\MemberLogin\img-01.png" />
     <Content Include="Assets\images\product-img\product-1.jpg" />
     <Content Include="Assets\images\product-img\product-2.jpg" />
     <Content Include="Assets\images\product-img\product-3.jpg" />
@@ -389,12 +501,16 @@
     <Content Include="Assets\javaScript\active.js" />
     <Content Include="Assets\javaScript\classy-nav.min.js" />
     <Content Include="Assets\javaScript\jquery-2.2.4.min.js" />
-    <Content Include="Assets\javaScript\MemberLogin\main.js" />
-    <Content Include="Assets\javaScript\MemberLogin\select2.js" />
-    <Content Include="Assets\javaScript\MemberLogin\select2.min.js" />
-    <Content Include="Assets\javaScript\MemberLogin\tooltip.js" />
     <Content Include="Assets\javaScript\MemberCentre\member.js" />
-    <Content Include="Assets\javaScript\MemberRegistered\main.js" />
+    <Content Include="Assets\javaScript\MemberCentre\popper.js" />
+    <Content Include="Assets\javaScript\MemberCentre\popper.min.js" />
+    <Content Include="Assets\javaScript\MemberCentre\tooltip.js" />
+    <Content Include="Assets\javaScript\MemberLogin\LoginPartialView.js" />
+    <Content Include="Assets\javaScript\MemberLogin\MemberLogin.js" />
+    <Content Include="Assets\javaScript\MemberLogin\popper.js" />
+    <Content Include="Assets\javaScript\MemberLogin\popper.min.js" />
+    <Content Include="Assets\javaScript\MemberLogin\tooltip.js" />
+    <Content Include="Assets\javaScript\MemberRegistered\MemberRegistered.js" />
     <Content Include="Assets\javaScript\plugins.js" />
     <Content Include="Assets\javaScript\popper.min.js" />
     <Content Include="Assets\javaScript\ProductDetails\test.js" />
@@ -442,101 +558,18 @@
     <Content Include="Assets\xlsxData\產品資料.xlsx" />
     <Content Include="Assets\css\productMenu\shop.css.map" />
     <Content Include="Assets\css\productMenu\shop.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\fonts\FontAwesome.otf" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\animated.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\bordered-pulled.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\core.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\fixed-width.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\font-awesome.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\icons.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\larger.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\list.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\mixins.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\path.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\rotated-flipped.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\screen-reader.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\stacked.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\less\variables.less" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\font-awesome.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_animated.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_core.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_fixed-width.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_icons.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_larger.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_list.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_mixins.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_path.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_screen-reader.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_stacked.scss" />
-    <Content Include="Assets\fonts\MemberLogin\font-awesome-4.7.0\scss\_variables.scss" />
-    <Content Include="Assets\fonts\MemberLogin\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
-    <Content Include="Assets\fonts\MemberLogin\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
-    <Content Include="Assets\fonts\MemberLogin\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-Black.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-BlackItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-Bold.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-BoldItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-ExtraBold.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-ExtraBoldItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-ExtraLight.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-ExtraLightItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-Italic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-Light.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-LightItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-Medium.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-MediumItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-Regular.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-SemiBold.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-SemiBoldItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-Thin.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\montserrat\Montserrat-ThinItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-Black.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-BlackItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-Bold.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-BoldItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-ExtraBold.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-ExtraBoldItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-ExtraLight.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-ExtraLightItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-Italic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-Light.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-LightItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-Medium.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-MediumItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-Regular.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-SemiBold.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-SemiBoldItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-Thin.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\poppins\Poppins-ThinItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-Black.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-BlackItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-Bold.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-BoldItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-ExtraBold.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-ExtraBoldItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-ExtraLight.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-ExtraLightItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-Italic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-Light.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-LightItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-Medium.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-MediumItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-Regular.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-SemiBold.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-SemiBoldItalic.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-Thin.ttf" />
-    <Content Include="Assets\fonts\MemberLogin\raleway\Raleway-ThinItalic.ttf" />
+    <Content Include="Assets\css\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Assets\css\fonts\raleway\Raleway-Black.ttf" />
+    <Content Include="Assets\css\fonts\raleway\Raleway-Bold.ttf" />
+    <Content Include="Assets\css\fonts\raleway\Raleway-Regular.ttf" />
+    <Content Include="Assets\css\fonts\raleway\Raleway-SemiBold.ttf" />
+    <None Include="Properties\PublishProfiles\bs2020survivalGame - Web Deploy.pubxml" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Assets\css\_Layout\layout.css.map" />
+    <Content Include="Assets\css\_Layout\layout.scss" />
     <None Include="Properties\PublishProfiles\bs2020SurvivalGameVer2 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
@@ -632,7 +665,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
@@ -647,11 +679,13 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Product\ProductMenu.cshtml" />
     <Content Include="Views\Member\MemberRegistered.cshtml" />
-    <Content Include="Views\Member\MemberLogin.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\ShoppingCart.cshtml" />
     <Content Include="Views\Product\ProductDetails.cshtml" />
     <Content Include="Views\Member\MemberCentre.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartialView.cshtml" />
+    <Content Include="Views\Member\MemberLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

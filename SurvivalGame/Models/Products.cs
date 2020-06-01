@@ -11,6 +11,7 @@ namespace SurvivalGame.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Products()
         {
+            Carts = new HashSet<Carts>();
             Imgs = new HashSet<Imgs>();
             Order_Details = new HashSet<Order_Details>();
             Procurement = new HashSet<Procurement>();
@@ -41,6 +42,9 @@ namespace SurvivalGame.Models
 
         [Column(TypeName = "money")]
         public decimal? Price { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Carts> Carts { get; set; }
 
         public virtual Class Class { get; set; }
 
