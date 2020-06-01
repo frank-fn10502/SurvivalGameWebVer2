@@ -168,7 +168,6 @@
     <Compile Include="ViewModels\ProductMenu\RangeViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\SubCatagoryViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\SubClassViewMode.cs" />
-    <Compile Include="ViewModels\Index\ProductsViewModel.cs" />
     <Compile Include="ViewModels\ShoppingCart\GetCartItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
