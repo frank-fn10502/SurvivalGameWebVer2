@@ -36,12 +36,10 @@ user.addEventListener("click", function () {
 
 //function submit () {
 //    alert("XDDD");
-
 //    if ((AccountInvalid.getAttribute("style") != "display: none;") && (PasswordInvalid.getAttribute("style") != "display: none;")) {
 //            alert("µn¤J¸ê®Æ¿ù»~");
 //            return;
 //        }
-    
 
 //    var MemberItem = {
 //        Account: Account.value,
