@@ -1,4 +1,5 @@
 ﻿using Microsoft.Ajax.Utilities;
+using Newtonsoft.Json;
 using SurvivalGame.Models;
 using SurvivalGame.ViewModels.ProductMenu;
 using System;
@@ -56,6 +57,7 @@ namespace SurvivalGame.Repository
             {
                 return null;
             }
+
             var context = new SGModel();
             var products = new SGRepository<Products>(context).GetAll();
             var catagorys = new SGRepository<Catagory>(context).GetAll();
@@ -67,6 +69,7 @@ namespace SurvivalGame.Repository
                          join ca in catagorys on cl.CatagoryID equals ca.ID
                          join p_a in pas on p.ID equals p_a.PID
                          select new { p ,cl ,ca ,p_a };
+
             result = result.Where(x => x.ca.ID == caId);
             if (clID != null)
             {
@@ -79,14 +82,20 @@ namespace SurvivalGame.Repository
             rangeViewModels.Add(new RangeViewModel
             {
                 Title = "價錢" ,
-                max = 10000 ,//(int?)result.Max(x => x.p.Price) ,
-                min = 30 //(int?)result.Min(x => x.p.Price)
+                max = (int?)result.Max(x => x.p.Price) ,
+                min = (int?)result.Min(x => x.p.Price)
             });
-            colorItemViewModels.AddRange(result.GroupBy(x => x.p.Color).Select(x =>
-                new ColorItemViewModel()
+            List<Color> colors = result.GroupBy(x => x.p.Color).Select(x => x.Key)
+                .ToList().Select(x =>
                 {
-                    Name = x.Key ,
-                    ColorCode = "#ccc"
+                    return JsonConvert.DeserializeObject<List<Color>>(x);
+                }).SelectMany(x => x).GroupBy( x => x.color).Select(x => x.First()).ToList();
+
+            colorItemViewModels.AddRange(colors.Select(x =>
+                new ColorItemViewModel
+                {
+                    ColorCode = x.cc,
+                    Name = x.color
                 }
             ));
             normalViewModels.AddRange(result.GroupBy(x => x.p_a.Name).Select(x =>
@@ -110,6 +119,9 @@ namespace SurvivalGame.Repository
                 RangeList = rangeViewModels ,
                 OtherList = normalViewModels
             };
+            //var test = result.GroupBy(x => x.p.Color).Where(x => x.Key.Contains("{")).Select(x => x.Key);
+            //var jtest = test.ToList()[0].ToString();
+            //var jsonR = JsonConvert.DeserializeObject<testr>(jtest);
             return attributesViewModel;
         }
 

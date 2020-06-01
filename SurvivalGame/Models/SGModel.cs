@@ -12,6 +12,7 @@ namespace SurvivalGame.Models
         {
         }
 
+        public virtual DbSet<Carts> Carts { get; set; }
         public virtual DbSet<Catagory> Catagory { get; set; }
         public virtual DbSet<Class> Class { get; set; }
         public virtual DbSet<Imgs> Imgs { get; set; }
@@ -27,6 +28,18 @@ namespace SurvivalGame.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Carts>()
+                .Property(e => e.ID)
+                .IsFixedLength();
+
+            modelBuilder.Entity<Carts>()
+                .Property(e => e.MemberID)
+                .IsFixedLength();
+
+            modelBuilder.Entity<Carts>()
+                .Property(e => e.ProductID)
+                .IsFixedLength();
+
             modelBuilder.Entity<Catagory>()
                 .Property(e => e.ID)
                 .IsFixedLength();
@@ -82,6 +95,12 @@ namespace SurvivalGame.Models
             modelBuilder.Entity<Members>()
                 .Property(e => e.Phone)
                 .IsFixedLength();
+
+            modelBuilder.Entity<Members>()
+                .HasMany(e => e.Carts)
+                .WithRequired(e => e.Members)
+                .HasForeignKey(e => e.MemberID)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Members>()
                 .HasMany(e => e.Orders)
@@ -172,6 +191,12 @@ namespace SurvivalGame.Models
             modelBuilder.Entity<Products>()
                 .Property(e => e.Price)
                 .HasPrecision(19, 4);
+
+            modelBuilder.Entity<Products>()
+                .HasMany(e => e.Carts)
+                .WithRequired(e => e.Products)
+                .HasForeignKey(e => e.ProductID)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Products>()
                 .HasMany(e => e.Imgs)

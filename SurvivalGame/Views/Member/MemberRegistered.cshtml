@@ -24,72 +24,72 @@
 
                     <form action="#" method="post" class="">
                         <div class="row">
-                            
+
                             <div class="col-12 mb-3 text-right">
                                 <label>(<span>*</span>為必填)</label>
                             </div>
 
                             <div class="col-12 mb-3">
                                 <label class="Name">姓名 <span>*</span></label>
-                                <input type="text" class="form-control" id="Name" value="" >
+                                <input type="text" class="form-control" id="Name" name="Name" value="">
                                 <div class="invalid-feedback NameInvalid">限填中文、英文</div>
                             </div>
                             <div class="col-12 mb-3">
                                 <label class="Account">帳號 <span>*</span></label>
-                                <input type="text" class="form-control" id="Account" value="" >
+                                <input type="text" class="form-control" id="Account" name="Account" value="">
                                 <div class="invalid-feedback AccountInvalid">開頭只能為大寫或小寫英文</div>
                             </div>
                             <div class="col-12 mb-3">
                                 <label class="Password">密碼 <span>*</span></label>
-                                <input type="password" class="form-control" id="Password" value="" >
-                                <div class="invalid-feedback PasswordInvalid">至少8位至多35位大小寫英文數字</div>
+                                <input type="password" class="form-control" id="Password" name="Password" value="">
+                                <div class="invalid-feedback PasswordInvalid">密碼長度介於8-35個大小寫英文數字</div>
                             </div>
                             <div class="col-12 mb-3">
                                 <label class="CheckPassword">確認密碼 <span>*</span></label>
-                                <input type="password" class="form-control" id="CheckPassword" value="" >
+                                <input type="password" class="form-control" id="CheckPassword" name="CheckPassword" value="">
                                 <div class="invalid-feedback CheckPasswordInvalid">密碼不一致</div>
                             </div>
                             <div class="col-12 mb-3">
                                 <label class="Birthday">生日 <span>*</span></label>
                                 <div class="BirthdayBox">
-                                    <input type="date" class="form-control" name="" id="Birth" >
+                                    <input type="date" class="form-control" name="Birth" id="Birth">
                                     <div class="BirthdayText">
                                         <p>※未滿18歲請勿購買玩具槍商品</p>
                                         <div class="invalid-feedback BirthdayInvalid">請選擇生日</div>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="col-12 mb-3">
                                 <label class="PostCode">郵遞區號 <span>*</span></label>
-                                <input type="text" class="form-control" id="PostCode" value="" >
-                                <div class="invalid-feedback PostCodeInvalid">請輸入至少3位數字</div>
+                                <input type="text" class="form-control" id="PostCode" name="PostCode" value="">
+                                <div class="invalid-feedback PostCodeInvalid">請輸入3至6位數字</div>
                             </div>
                             <div class="col-12 mb-3">
                                 <label class="Address">地址 <span>*</span></label>
-                                <input type="text" class="form-control" id="Address" value="" >
+                                <input type="text" class="form-control" id="Address" name="Address" value="">
                                 <div class="invalid-feedback AddressInvalid">請輸入完整地址</div>
                             </div>
                             <div class="col-12 mb-3">
                                 <label class="Phone">手機 <span>*</span></label>
-                                <input type="tel" class="form-control" id="Phone" value="" >
-                                <div class="invalid-feedback PhoneInvalid">請輸入10位數字手機號碼</div>
+                                <input type="tel" class="form-control" id="Phone" name="Phone" value="">
+                                <div class="invalid-feedback PhoneInvalid">請輸入09開頭的10位數字手機號碼</div>
                             </div>
                             <div class="col-12 mb-4 validate-input">
                                 <label class="EmailAddress">信箱 <span>*</span></label>
-                                <input type="email" class="form-control InputEmail" id="Email" aria-describedby="emailHelp" >
+                                <input type="email" class="form-control InputEmail" id="Email" name="Email" aria-describedby="emailHelp">
                                 <div class="invalid-feedback EmailInvalid">請輸入完整信箱地址</div>
                             </div>
                         </div>
                     </form>
                     <div class="Check col-12">
-                        <label for="Look"><input type="checkbox" name="" id="Look">&nbsp;我已詳閱</label>&nbsp;<a href=""
-                                                                                                              data-toggle="modal" data-target="#Law" class="MemberTerms">會員條款</a>
+                        <label for="Look"><input type="checkbox" name="Look" id="Look">&nbsp;我已詳閱</label>&nbsp;
+                        <a href=""
+                           data-toggle="modal" data-target="#Law" class="MemberTerms">會員條款</a>
                     </div>
 
                     <div class="checkout-btn my-5 Submit">
                         <a href="@Url.Action("membercentre","member")" class="btn essence-btn-login">登入</a>
-                        <a href="" class="btn essence-btn" id="Registered">註冊</a>
+                        <button class="btn essence-btn" id="Registered" onclick="submit()">註冊</button>
                     </div>
                 </div>
             </div>
@@ -123,10 +123,14 @@
                                             <p>2. 您所登錄之個人資料，除了應提供廠商相關送貨與結帳資訊，本站應負相關之保密義務，不會任意洩漏貨提供給第三人。</p>
                                             <p>3. 您應妥善保管在本站登記之帳號與密碼，所有使用該帳號登入系統之任何行為，本站皆視為帳號與密碼持有人之行為。</p>
                                             <p>
-                                                4. 在下列情況下，本站有權查看或提供使用者的個人資料給有權機關、或主張其權利受侵害並提出適當證明之第三人：<br>
-                                                ※ 依法令規定、或依司法機關或其他有權機關的命令；<br>
-                                                ※ 為執行本約定條款、或使用者違反約定條款；<br>
-                                                ※ 為維護本站系統之正常運作及安全；<br>
+                                                4. 在下列情況下，本站有權查看或提供使用者的個人資料給有權機關、或主張其權利受侵害並提出適當證明之第三人：
+                                                <br>
+                                                ※ 依法令規定、或依司法機關或其他有權機關的命令；
+                                                <br>
+                                                ※ 為執行本約定條款、或使用者違反約定條款；
+                                                <br>
+                                                ※ 為維護本站系統之正常運作及安全；
+                                                <br>
                                                 ※ 為保護本站、其他使用者、或其他第三人的合法權益；
                                             </p>
                                             <p>5. 本站所有商品皆由協力廠商所提供，交易行為僅存在於廠商與使用者之間，本站僅提供廠商與使用者之間的交易平台與付款機制。</p>
@@ -144,8 +148,10 @@
                                                 所有在本站所進行的線上消費，使用者應同意以本站所紀錄之電子交易資料為準，如有糾紛，並以該電子交易資料為認定標準。使用者如果發現交易資料不正確，應立即通知本站服務台。
                                             </p>
                                             <p>
-                                                9. 本站在發生下列情形之一時，可以停止、中斷提供服務；停止或中斷服務時，原則上本站將先通知會員，惟緊急時刻不在此限： <br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;1. 對本站的電子通信設備，進行必要的保養及施工 <br>
+                                                9. 本站在發生下列情形之一時，可以停止、中斷提供服務；停止或中斷服務時，原則上本站將先通知會員，惟緊急時刻不在此限：
+                                                <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;1. 對本站的電子通信設備，進行必要的保養及施工
+                                                <br>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;2. 發生突發性的電子通信設備故障；
                                                 由於本站所申請的電子通信服務被停止，致使提供服務發生困難；由於天災等不可抗力之因素，致使本站無法提供服務。
                                             </p>
@@ -182,7 +188,6 @@
     <link href="~/Assets/css/MemberRegistered/MemberRegistered.css" rel="stylesheet" />
 }
 
-@section bottomJs
-{
-    <script src="~/Assets/javaScript/MemberRegistered/main.js"></script>
+@section bottomJs{
+    <script src="~/Assets/javaScript/MemberRegistered/MemberRegistered.js"></script>
 }
