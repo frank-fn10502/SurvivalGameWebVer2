@@ -5,7 +5,7 @@ namespace SurvivalGame.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class SGModel : DbContext
+    public partial class SGModel :DbContext
     {
         public SGModel()
             : base("name=SGModel")
@@ -122,7 +122,7 @@ namespace SurvivalGame.Models
 
             modelBuilder.Entity<Order_Details>()
                 .Property(e => e.UnitPrice)
-                .HasPrecision(19, 4);
+                .HasPrecision(19 ,4);
 
             modelBuilder.Entity<Orders>()
                 .Property(e => e.ID)
@@ -166,7 +166,7 @@ namespace SurvivalGame.Models
 
             modelBuilder.Entity<Procurement>()
                 .Property(e => e.UintPrice)
-                .HasPrecision(19, 4);
+                .HasPrecision(19 ,4);
 
             modelBuilder.Entity<Product_Attributes>()
                 .Property(e => e.ID)
@@ -190,7 +190,7 @@ namespace SurvivalGame.Models
 
             modelBuilder.Entity<Products>()
                 .Property(e => e.Price)
-                .HasPrecision(19, 4);
+                .HasPrecision(19 ,4);
 
             modelBuilder.Entity<Products>()
                 .HasMany(e => e.Carts)
@@ -226,12 +226,6 @@ namespace SurvivalGame.Models
                 .HasMany(e => e.RelatedProducts)
                 .WithRequired(e => e.Products)
                 .HasForeignKey(e => e.ProductID)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Products>()
-                .HasMany(e => e.RelatedProducts1)
-                .WithRequired(e => e.Products1)
-                .HasForeignKey(e => e.RelationPID)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<RelatedProducts>()
