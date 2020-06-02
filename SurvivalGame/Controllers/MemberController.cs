@@ -35,9 +35,8 @@ namespace SurvivalGame.Controllers
             return View();
         }
 
-        //, Account, Password, Birth ,Postcode ,Address ,Phone ,Email
         [HttpPost]
-        public ActionResult GetRegistered([Bind(Include = "Name")] MemberRegisteredViewModel registeredVM)
+        public ActionResult GetRegistered([Bind(Include = "Name, Account, Password, Birth ,Postcode ,Address ,Phone ,Email")] MemberRegisteredViewModel registeredVM)
         {
             if (ModelState.IsValid)
             {
@@ -64,24 +63,24 @@ namespace SurvivalGame.Controllers
         [HttpPost]
         public ActionResult GetLogin([Bind(Include = "Account, Password")] MemberLoginViewModel loginVM)
         {
-            if (!ModelState.IsValid)
-            {
-                return Json(new
-                {
-                    status = false ,
-                    token = "Account Or Password is not Valid"
-                });
-            }
-            var repository = new SGRepository<Members>(new SGModel());
-            var result = repository.GetAll().Where(x => x.Name == loginVM.Account && x.Password == loginVM.Password).FirstOrDefault();
-            if (result == null)
-            {
-                return Json(new
-                {
-                    status = false ,
-                    token = "Account Or Password Error"
-                });
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return Json(new
+            //    {
+            //        status = false ,
+            //        token = "Account Or Password is not Valid"
+            //    });
+            //}
+            //var repository = new SGRepository<Members>(new SGModel());
+            //var result = repository.GetAll().Where(x => x.Name == loginVM.Account && x.Password == loginVM.Password).FirstOrDefault();
+            //if (result == null)
+            //{
+            //    return Json(new
+            //    {
+            //        status = false ,
+            //        token = "Account Or Password Error"
+            //    });
+            //}
 
             JwtAuthUtil jwtAuthUtil = new JwtAuthUtil();
             string jwtToken = jwtAuthUtil.GenerateToken(loginVM.Account);

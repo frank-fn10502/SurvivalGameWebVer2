@@ -1,40 +1,40 @@
-let inputName = document.getElementById("Name");
-let rule_name = /^[\a-\z\A-\Z\u2E80-\u9FFF]*$/;
+var inputName = document.getElementById("Name");
+var rule_name = /^[\a-\z\A-\Z\u2E80-\u9FFF]*$/;
 
-let inputAccount = document.getElementById("Account");
-let rule_account = /^[a-zA-Z_]\w*$/;
+var inputAccount = document.getElementById("Account");
+var rule_account = /^[a-zA-Z_]\w*$/;
 
-let inputPassword = document.getElementById("Password");
-let rule_password = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,35}$/;
+var inputPassword = document.getElementById("Password");
+var rule_password = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,35}$/;
 
-let inputCheckPassword = document.getElementById("CheckPassword");
+var inputCheckPassword = document.getElementById("CheckPassword");
 
-let inputBirth = document.getElementById("Birth");
+var inputBirth = document.getElementById("Birth");
 
-let inputPostCode = document.getElementById("PostCode");
-let rule_postCode = /^\d{3,6}$/;
+var inputPostCode = document.getElementById("PostCode");
+var rule_postCode = /^\d{3,6}$/;
 
-let inputAddress = document.getElementById("Address");
-let rule_address = /^[\a-\z\A-\Z\u2E80-\u9FFF]*$/;
+var inputAddress = document.getElementById("Address");
+var rule_address = /^[\a-\z\A-\Z\u2E80-\u9FFF]*$/;
 
-let inputPhone = document.getElementById("Phone");
-let rule_phone = /^09\d{8}$/;
+var inputPhone = document.getElementById("Phone");
+var rule_phone = /^09\d{8}$/;
 
-let inputEmail = document.getElementById("Email");
-let rule_email = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+var inputEmail = document.getElementById("Email");
+var rule_email = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
 
-let NameInvalid = document.querySelector(".NameInvalid");
-let AccountInvalid = document.querySelector(".AccountInvalid");
-let PasswordInvalid = document.querySelector(".PasswordInvalid");
-let CheckPasswordInvalid = document.querySelector(".CheckPasswordInvalid");
-let BirthdayInvalid = document.querySelector(".BirthdayInvalid");
-let PostCodeInvalid = document.querySelector(".PostCodeInvalid");
-let AddressInvalid = document.querySelector(".AddressInvalid");
-let PhoneInvalid = document.querySelector(".PhoneInvalid");
-let EmailInvalid = document.querySelector(".EmailInvalid");
+var NameInvalid = document.querySelector(".NameInvalid");
+var AccountInvalid = document.querySelector(".AccountInvalid");
+var PasswordInvalid = document.querySelector(".PasswordInvalid");
+var CheckPasswordInvalid = document.querySelector(".CheckPasswordInvalid");
+var BirthdayInvalid = document.querySelector(".BirthdayInvalid");
+var PostCodeInvalid = document.querySelector(".PostCodeInvalid");
+var AddressInvalid = document.querySelector(".AddressInvalid");
+var PhoneInvalid = document.querySelector(".PhoneInvalid");
+var EmailInvalid = document.querySelector(".EmailInvalid");
 
-let InvalidFeedback = document.querySelectorAll(".invalid-feedback");
-let submit = document.getElementById("Registered");
+var InvalidFeedback = document.querySelectorAll(".checkout_details_area .invalid-feedback");
+var submit = document.getElementById("Registered");
 
 submit.addEventListener("click", function () {
     for (let i = 0; i < InvalidFeedback.length; i++) {

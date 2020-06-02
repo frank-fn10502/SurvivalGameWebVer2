@@ -57,27 +57,27 @@ var LoginButton = document.querySelector(".login100-form-btn");
 //    });
 //}
 
-LoginButton.onclick = function (e) {
-    e.preventDefault();
-    //alert("XDDD");
+//LoginButton.onclick = function (e) {
+//    e.preventDefault();
+//    //alert("XDDD");
 
-    if ((AccountInvalid.getAttribute("style") != "display: none;") && (PasswordInvalid.getAttribute("style") != "display: none;")) {
-        alert("登入資料錯誤");
-        return;
-    }
+//    if ((AccountInvalid.getAttribute("style") != "display: none;") && (PasswordInvalid.getAttribute("style") != "display: none;")) {
+//        alert("登入資料錯誤");
+//        return;
+//    }
 
-    let MemberItem = {
-        Account: Account.value,
-        Password: Password.value
-    };
-    console.log(JSON.stringify(MemberItem));
-    $.ajax({
-        url: "/Member/GetLogin",
-        method: "post",
-        contentType: 'application/json',
-        data: JSON.stringify(MemberItem),
-        success: function () {
-            //window.location.href = '/Home/Index';
-        }
-    });
-}
+//    let MemberItem = {
+//        Account: Account.value,
+//        Password: Password.value
+//    };
+//    console.log(JSON.stringify(MemberItem));
+//    $.ajax({
+//        url: "/Member/GetLogin",
+//        method: "post",
+//        contentType: 'application/json',
+//        data: JSON.stringify(MemberItem),
+//        success: function () {
+//            //window.location.href = '/Home/Index';
+//        }
+//    });
+//}

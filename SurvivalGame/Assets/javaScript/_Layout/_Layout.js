@@ -46,8 +46,8 @@ function initLayout() {
     user = document.querySelector(".user-login-info > a");
     AccountLayout = document.querySelector(".modal-content .ModalAccount");
     PasswordLayout = document.querySelector(".modal-content .ModalPassword");
-    AccountInvalidLayout = document.querySelector(".modal-content .ModalAccountInvalidLayout");
-    PasswordInvalidLayout = document.querySelector(".modal-content .ModalPasswordInvalidLayout");
+    AccountInvalidLayout = document.querySelector(".modal-content .ModalAccountInvalid");
+    PasswordInvalidLayout = document.querySelector(".modal-content .ModalPasswordInvalid");
     isLogin = false;
 
     user.addEventListener("click", function () {
@@ -95,8 +95,8 @@ function initLayout() {
         }
 
         var MemberItem = {
-            AccountLayout: AccountLayout.value,
-            PasswordLayout: PasswordLayout.value
+            Account: AccountLayout.value,
+            Password: PasswordLayout.value
         };
         console.log(JSON.stringify(MemberItem));
         $.ajax({
