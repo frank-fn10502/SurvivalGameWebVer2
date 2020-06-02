@@ -1,11 +1,13 @@
 ﻿using Microsoft.Ajax.Utilities;
 using Newtonsoft.Json;
 using SurvivalGame.Models;
+using SurvivalGame.ViewModels.ProductDetails;
 using SurvivalGame.ViewModels.ProductMenu;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+
 
 namespace SurvivalGame.Repository
 {
@@ -161,6 +163,50 @@ namespace SurvivalGame.Repository
                         OnsalePrice = x.FirstOrDefault().OnsalePrice
                     }
                 );
+        }
+
+        public ProductDetailsViewModel GetProductDetails(string PID)
+        {
+            var context = new SGModel();
+            var product = context.Products;
+            var imgs = context.Imgs;
+            var attrbutes = context.Product_Attributes;
+            var data = from p in product
+                       select new { p };
+            var result = data.Where(x => x.p.ID == PID).Select(x =>
+            new
+            {
+                Id = x.p.ID,
+                Name = x.p.Name,
+                Price = x.p.Price,
+                Describe = x.p.Depiction,
+                color = x.p.Color,
+            }
+               ).FirstOrDefault();
+            var test = result.Describe;
+
+            var resultB = imgs.Where(x => x.ProductID == PID).Select(x => x.Img).ToList();
+            var resultC = attrbutes.Where(x => x.PID == PID).Select(x =>
+               new
+               {
+                   x.Name,
+                   x.Value
+               }
+               ).ToList().Select(x =>
+               new
+               {
+                   Describe = $"{x.Name}:{x.Value}"
+               });
+            var DesConvert = JsonConvert.DeserializeObject<DescribeViewModels>(result.Describe);
+            ProductDetailsViewModel productDetailsViewModel = new ProductDetailsViewModel();
+            productDetailsViewModel.Id = result.Id;
+            productDetailsViewModel.Name = result.Name;
+            productDetailsViewModel.Price = result.Price;
+            productDetailsViewModel.color = result.color;
+            productDetailsViewModel.Describe = result.Describe;
+            productDetailsViewModel.Imgs = resultB;
+            productDetailsViewModel.Describe = string.Join("\n", resultC.Select(x => x.Describe)) + "\n" + string.Join("\n", DesConvert.Attr) + "\n" + DesConvert.Depiction;
+            return productDetailsViewModel;
         }
     }
 }
