@@ -56,14 +56,14 @@ namespace SurvivalGame.Controllers
         [HttpPost]
         public ActionResult GetLogin([Bind(Include = "Account, Password")] MemberLoginViewModel loginVM)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return Json(new
-            //    {
-            //        status = false ,
-            //        token = "Account Or Password is not Valid"
-            //    });
-            //}
+            if (!ModelState.IsValid)
+            {
+                return Json(new
+                {
+                    status = false ,
+                    token = "Account Or Password is not Valid"
+                });
+            }
             //var repository = new SGRepository<Members>(new SGModel());
             //var result = repository.GetAll().Where(x => x.Name == loginVM.Account && x.Password == loginVM.Password).FirstOrDefault();
             //if (result == null)

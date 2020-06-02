@@ -30,7 +30,7 @@ user.addEventListener("click", function () {
         }
     })
 
-})
+//})
 
 ModalLoginButton.onclick = function (e) {
     e.preventDefault();

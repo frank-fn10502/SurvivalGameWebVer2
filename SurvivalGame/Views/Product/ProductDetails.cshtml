@@ -1,40 +1,33 @@
-﻿
-@{
-    ViewBag.Title = "商品明細";
-}
+﻿@model SurvivalGame.ViewModels.ProductDetails.ProductDetailsViewModel
+    @{
+        ViewBag.Title = "商品明細";
+    }
 
 <section class="single_product_details_area d-flex align-items-center">
 
     <!-- Single Product Thumb -->
     <div class="single_product_thumb clearfix" style="background-color:aqua">
         <div class="product_thumbnail_slides owl-carousel">
-            <img src="https://sf-shop.tw/wp-content/uploads/WE-G19V-RMR%E7%89%88-%E7%93%A6%E6%96%AF%E6%89%8B%E6%A7%8D-2900.jpg"
-                 alt="">
-            <img src="https://sf-shop.tw/wp-content/uploads/WE-G19V-RMR%E7%89%88-%E7%93%A6%E6%96%AF%E6%89%8B%E6%A7%8D-%E9%BB%91%E8%89%B2-2900-10.jpg"
-                 alt="">
-            <img src="https://sf-shop.tw/wp-content/uploads/WE-G19V-RMR%E7%89%88-%E7%93%A6%E6%96%AF%E6%89%8B%E6%A7%8D-%E6%B2%99%E8%89%B2-2900.jpg"
-                 alt="">
+            @foreach (var i in Model.Imgs)
+                {
+                    <img src="~/@i" alt="">
+                }
+            @*<img src="#" alt="Alternate Text" />
+            <img src="#" alt="Alternate Text" />
+            <img src="#" alt="Alternate Text" />*@
         </div>
 
     </div>
     <!-- Single Product Description -->
     <div class="single_product_desc clearfix">
-        <span class="BadgeName">編號:A01</span>
+        <span class="BadgeName">@Model.Id</span>
         <a href="cart.html">
-            <h2 id="ProductName">G19V Glock19V 瓦斯手槍</h2>
+            <h2 id="ProductName">@Model.Name</h2>
         </a>
-        <p class="product-price">價格:<span>13,000</span></p>
+        <p class="product-price">價格:<span style="text-decoration:none">@Model.Price</span></p>
         <div class="product-desc">
             <strong>產品規格:</strong>
-            <p>➤材質 : 金屬/塑膠</p>
-            <p>➤動力 : 瓦斯</p>
-            <p>➤彈容量 : 20發</p>
-            <p>➤初速 : 約90 m/s(0.2g BB彈)</p>
-            <p>➤長度 : 174 mm</p>
-            <p>➤重量 : 690 g</p>
-            <p>➤射擊模式 : 單發/保險</p>
-            <p>➤滑套可動，無彈後定</p>
-            <p>➤原廠槍均為一槍一彈匣</p>
+            <p>@Model.Describe</p>
         </div>
 
         <!-- Form -->

@@ -1,0 +1,113 @@
+body {
+    background-image: url('/Assets/images/bg-img/200531_0011.jpg');
+}
+
+.Products img {
+    width: 250px;
+}
+
+.HotNewSale p {
+    font-size: 80px;
+    color: red;
+}
+
+.HotNewSale a {
+    text-decoration: none;
+}
+
+.HotNewSale {
+    overflow: hidden;
+    margin: auto;
+}
+
+    .HotNewSale img {
+        max-width: 100%;
+        height: auto;
+        transform: scale(1,1);
+        transition: all 1s ease-out;
+    }
+
+        .HotNewSale img:hover {
+            transform: scale(1.1,1.1);
+        }
+.welcome_area {
+    position: relative;
+    background-image: url('../../images/bg-img/200531_0005.jpg');
+    z-index: 0;
+}
+
+    .welcome_area:hover:before {
+        background: 60% bottom no-repeat url(/../Assets/images/bg-img/200531_01.png);
+        transition: 1.5s;
+        z-index: 0;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .welcome_area:hover {
+        transition: 1.5s;
+        z-index: 0;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .welcome_area:before {
+        content: '';
+        height: 52VH;
+        background-size: cover;
+        box-shadow: 0rem 1rem 10px 0px;
+        background: 60% bottom no-repeat url(/../Assets/images/bg-img/BG02.png);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        position: absolute;
+    }
+
+    .welcome_area .hero-content h2 {
+        color: #000;
+        text-shadow: 1rem 1rem 10px #000;
+    }
+
+    .welcome_area:hover .hero-content h2 {
+        color: #000;
+        transition: 2S;
+        text-shadow: 1rem 1rem 10px #000;
+    }
+
+#world {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+}
+.essence-btn:focus,
+.essence-btn, .essence-btn:hover {
+    background-color: #003263;
+}
+
+#BG {
+    background: #b48550c7;
+}
+
+.slider_area {
+    margin-bottom: 5rem;
+}
+
+.separate {
+    margin-top: 5rem;
+    height: 2.5rem;
+    background: #563013;
+     box-shadow: 1rem 3rem 5rem 20px #d7b36200, 1rem 6rem 5rem #fffbf900, 1rem 0rem 0.5rem #00000000, 1rem -1rem 3rem #00000000, 1rem 3rem 3rem #ffffff00, inset 0px 8px 8px #976651; 
+}
+.single_catagory_area {
+height:500px;
+}
+.single_catagory_area:after {
+    background-color: unset;
+}
+.single-product-wrapper .product-description {
+padding:0 10px;
+}
+    .single_catagory_area:hover .catagory-content a,
+    .single_catagory_area .catagory-content a {
+        color: #BBB;
+    }
