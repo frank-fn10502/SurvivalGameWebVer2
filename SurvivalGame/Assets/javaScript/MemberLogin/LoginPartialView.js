@@ -41,7 +41,7 @@ var LoginButton = document.querySelector(".login100-form-btn");
 //            return;
 //        }
 
-//    var MemberItem = {
+//    let MemberItem = {
 //        Account: Account.value,
 //        Password: Password.value
 //    };
@@ -62,11 +62,11 @@ LoginButton.onclick = function (e) {
     //alert("XDDD");
 
     if ((AccountInvalid.getAttribute("style") != "display: none;") && (PasswordInvalid.getAttribute("style") != "display: none;")) {
-        alert(u"登入資料錯誤");
+        alert("登入資料錯誤");
         return;
     }
 
-    var MemberItem = {
+    let MemberItem = {
         Account: Account.value,
         Password: Password.value
     };

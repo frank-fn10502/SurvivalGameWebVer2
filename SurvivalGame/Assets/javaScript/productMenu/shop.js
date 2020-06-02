@@ -138,31 +138,6 @@ function initActivate() {
     });
 }
 
-function resetDisply(caID = undefined, clID = undefined) {
-    new Promise((resolve, reject) => {
-        $.ajax({
-            type: "GET",
-            url: "/Product/GetCatagoryItems",
-            dataType: "JSON",
-            data: { "CaId": caID, "clID": clID },
-            success: function (response) {
-                console.log(response);
-                fakeCategoryData = response.CatagoryList;
-                fakeProductData = response.ProductList;
-                fakeSubClassData = response.Attributes;
-
-                resolve("get Data from sql server Donme!!!");
-            },
-            error: function (r) {
-
-            }
-        });
-    }).then((e) => {
-        getRealData();
-        initActivate();
-        firstPage = false;
-    });
-}
 function setEvent() {
     if (firstPage) {
         catagoryBtn = document.querySelector('.catagoryTitle .btn');
@@ -265,6 +240,32 @@ function getRealData() {
 
 
     setEvent();
+}
+
+function resetDisply(caID = undefined, clID = undefined) {
+    new Promise((resolve, reject) => {
+        $.ajax({
+            type: "GET",
+            url: "/Product/GetCatagoryItems",
+            dataType: "JSON",
+            data: { "CaId": caID, "clID": clID },
+            success: function (response) {
+                console.log(response);
+                fakeCategoryData = response.CatagoryList;
+                fakeProductData = response.ProductList;
+                fakeSubClassData = response.Attributes;
+
+                resolve("get Data from sql server Donme!!!");
+            },
+            error: function (r) {
+
+            }
+        });
+    }).then((e) => {
+        getRealData();
+        initActivate();
+        firstPage = false;
+    });
 }
 
 window.onload = function () {

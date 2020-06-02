@@ -64,7 +64,7 @@
 }
 
 .user-login-info .dropdown-menu span a {
-  display: inline;
+  display: inline-block;
   margin: 0 5px;
   line-height: 40px;
 }

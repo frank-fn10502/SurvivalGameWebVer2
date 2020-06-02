@@ -17,6 +17,12 @@ namespace SurvivalGame.Controllers
         {
             return View();
         }
+        //public ActionResult ProductMenu(string catagoryID ,int sortType)
+        //{
+        //    ViewData["catagoryID"] = catagoryID;
+        //    ViewData["sortType"] = sortType;
+        //    return View();
+        //}
 
         public ActionResult ShoppingCart()
         {
@@ -31,7 +37,7 @@ namespace SurvivalGame.Controllers
         public ActionResult GetCatagoryItems(string CaId ,string clId)
         {
             var t = pService.GetViewData(CaId ,clId);
-            return Json( t,JsonRequestBehavior.AllowGet);
+            return Json(t ,JsonRequestBehavior.AllowGet);
         }
     }
 }

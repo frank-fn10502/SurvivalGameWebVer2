@@ -1,11 +1,11 @@
 let user;
-let AccountInvalid;
-let PasswordInvalid;
-let Account
-let Password;
+let AccountInvalidLayout;
+let PasswordInvalidLayout;
+let AccountLayout;
+let PasswordLayout;
 
-let rule_account = /^[a-zA-Z_]\w*$/;
-let rule_password = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,35}$/;
+let rule_accountLayout = /^[a-zA-Z_]\w*$/;
+let rule_passwordLayout = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,35}$/;
 var isLogin = false;
 
 function checkLoginStatus() {
@@ -44,10 +44,10 @@ function checkLoginStatus() {
 
 function initLayout() {
     user = document.querySelector(".user-login-info > a");
-    Account = document.querySelector(".modal-content .ModalAccount");
-    Password = document.querySelector(".modal-content .ModalPassword");
-    AccountInvalid = document.querySelector(".modal-content .ModalAccountInvalid");
-    PasswordInvalid = document.querySelector(".modal-content .ModalPasswordInvalid");
+    AccountLayout = document.querySelector(".modal-content .ModalAccount");
+    PasswordLayout = document.querySelector(".modal-content .ModalPassword");
+    AccountInvalidLayout = document.querySelector(".modal-content .ModalAccountInvalidLayout");
+    PasswordInvalidLayout = document.querySelector(".modal-content .ModalPasswordInvalidLayout");
     isLogin = false;
 
     user.addEventListener("click", function () {
@@ -58,18 +58,18 @@ function initLayout() {
             $("#Login").modal('show');
         }
     });
-    Account.addEventListener("keyup", function () {
-        if (rule_account.test(Account.value) === true && Account.value != "") {
-            AccountInvalid.setAttribute("style", "display: none;");
+    AccountLayout.addEventListener("keyup", function () {
+        if (rule_accountLayout.test(AccountLayout.value) === true && AccountLayout.value != "") {
+            AccountInvalidLayout.setAttribute("style", "display: none;");
         } else {
-            AccountInvalid.setAttribute("style", "display: block;");
+            AccountInvalidLayout.setAttribute("style", "display: block;");
         }
     });
-    Password.addEventListener("keyup", function () {
-        if (rule_password.test(Password.value) === true && Password.value != "") {
-            PasswordInvalid.setAttribute("style", "display: none;");
+    PasswordLayout.addEventListener("keyup", function () {
+        if (rule_passwordLayout.test(PasswordLayout.value) === true && PasswordLayout.value != "") {
+            PasswordInvalidLayout.setAttribute("style", "display: none;");
         } else {
-            PasswordInvalid.setAttribute("style", "display: block;");
+            PasswordInvalidLayout.setAttribute("style", "display: block;");
         }
     });
     document.querySelector('.user-login-info #accountId a').addEventListener('click', function (e) {
@@ -89,14 +89,14 @@ function initLayout() {
     loginBtn.addEventListener('click', function (e) {
         e.preventDefault();
 
-        if ((AccountInvalid.getAttribute("style") != "display: none;") && (PasswordInvalid.getAttribute("style") != "display: none;")) {
+        if ((AccountInvalidLayout.getAttribute("style") != "display: none;") && (PasswordInvalidLayout.getAttribute("style") != "display: none;")) {
             alert("登入資料錯誤");
             return;
         }
 
         var MemberItem = {
-            Account: Account.value,
-            Password: Password.value
+            AccountLayout: AccountLayout.value,
+            PasswordLayout: PasswordLayout.value
         };
         console.log(JSON.stringify(MemberItem));
         $.ajax({

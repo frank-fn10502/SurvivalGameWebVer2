@@ -9,9 +9,9 @@ namespace SurvivalGame.ViewModels.MemberRegistered
 {
     public class MemberRegisteredViewModel
     {
-        [Required]
-        [RegularExpression(@"^[\a-\z\A-\Z\u2E80-\u9FFF]*$")]
-        [StringLength(25, MinimumLength = 2, ErrorMessage = "姓名長度介於2-25個字元")]
+        //[Required]
+        //[RegularExpression(@"^[\a-\z\A-\Z\u2E80-\u9FFF]*$")]
+        //[StringLength(25, MinimumLength = 2, ErrorMessage = "姓名長度介於2-25個字元")]
         public string Name { get; set; }
 
         [Required]

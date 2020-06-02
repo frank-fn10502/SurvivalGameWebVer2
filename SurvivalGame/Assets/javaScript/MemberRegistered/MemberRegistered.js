@@ -42,42 +42,52 @@ var EmailInvalid = document.querySelector(".EmailInvalid");
 //    item.setAttribute("data-pass", "0");
 //}
 
-var InvalidFeedback = document.querySelectorAll(".invalid-feedback");
+var InvalidFeedback = document.querySelectorAll(".checkout_details_area .invalid-feedback");
 //var agree = document.getElementById("Look");
 
-
+document.querySelector('#Registered').addEventListener('click', (e) => {
+    e.preventDefault();
+    submit();
+});
 
 function submit() {
-    for (let i = 0; i < InvalidFeedback.length; i++) {
-        if (InvalidFeedback[i].getAttribute("style") != "display: none;") {
-            alert("資料不完整");
-            return;
-        }
-    }
+    //for (let i = 0; i < InvalidFeedback.length; i++) {
+    //    if (InvalidFeedback[i].getAttribute("style") != "display: none;") {
+    //        alert("資料不完整");
+    //        return;
+    //    }
+    //}
 
-    if (!$("#Look").prop('checked')) {
-        alert("請勾選會員條款");
-        return;
-    }
+    //if (!$("#Look").prop('checked')) {
+    //    alert("請勾選會員條款");
+    //    return;
+    //}
 
-    var MemberItem = {
-        Name: inputName.value,
-        Account: inputAccount.value,
-        Password: inputPassword.value,
-        Birth: inputBirth["value"],
-        postcode: inputPostCode.value,
-        address: inputAddress.value,
-        phone: inputPhone.value,
-        email: inputEmail.value
+    //var MemberItem = {
+    //    Name: inputName.value,
+    //    Account: inputAccount.value,
+    //    Password: inputPassword.value,
+    //    Birth: inputBirth["value"],
+    //    postcode: inputPostCode.value,
+    //    address: inputAddress.value,
+    //    phone: inputPhone.value,
+    //    email: inputEmail.value
+    //};
+    let MemberItem = {
+        Name: 'test'
     };
     console.log(JSON.stringify(MemberItem));
+
     $.ajax({
-        url: "/Member/GetRegistered",
         method: "post",
-        contentType: 'application/json',
-        data: JSON.stringify(MemberItem),
-        success: function () {
+        url: "/Member/GetRegistered",
+        dataType: "JSON",
+        data: MemberItem,
+        success: function (data) {
             //window.location.href = '/Home/Index';
+        },
+        error: function (e) {
+            console.log('has an error!!!');
         }
     });
 }

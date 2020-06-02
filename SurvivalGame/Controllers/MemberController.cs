@@ -18,11 +18,6 @@ namespace SurvivalGame.Controllers
     public class MemberController :Controller
     {
 
-        // GET: Member
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
         public ActionResult MemberRegistered()
         {
             return View();
@@ -40,13 +35,26 @@ namespace SurvivalGame.Controllers
             return View();
         }
 
+        //, Account, Password, Birth ,Postcode ,Address ,Phone ,Email
         [HttpPost]
-        public ActionResult GetRegistered([Bind(Include = "Name, Account, Password,Birth ,Postcode ,Address , Phone ,Email")] MemberRegisteredViewModel registeredVM)
+        public ActionResult GetRegistered([Bind(Include = "Name")] MemberRegisteredViewModel registeredVM)
         {
             if (ModelState.IsValid)
             {
-                //db.Accounts.Add(registeredVM);
-                //db.SaveChanges();
+                SGModel context = new SGModel();
+                Members m = new Members()
+                {
+                    Name = registeredVM.Name ,
+                    Account = registeredVM.Account ,
+                    Password = registeredVM.Password ,
+                    Birthday = registeredVM.Birth ,
+                    Address = $"{registeredVM.PostCode}_{registeredVM.Address}" ,
+                    Phone = registeredVM.Phone ,
+                    Mail = registeredVM.Email ,
+                };
+                SGRepository<Members> re = new SGRepository<Members>(context);
+                re.Create(m);
+                context.SaveChanges();
                 return RedirectToAction("Index" ,"Home");
             }
             return View(registeredVM);
@@ -64,16 +72,16 @@ namespace SurvivalGame.Controllers
                     token = "Account Or Password is not Valid"
                 });
             }
-            //var repository = new SGRepository<Members>(new SGModel());
-            //var result = repository.GetAll().Where(x => x.Name == loginVM.Account && x.Password == loginVM.Password).FirstOrDefault();
-            //if (result == null)
-            //{
-            //    return Json(new
-            //    {
-            //        status = false ,
-            //        token = "Account Or Password Error"
-            //    });
-            //}
+            var repository = new SGRepository<Members>(new SGModel());
+            var result = repository.GetAll().Where(x => x.Name == loginVM.Account && x.Password == loginVM.Password).FirstOrDefault();
+            if (result == null)
+            {
+                return Json(new
+                {
+                    status = false ,
+                    token = "Account Or Password Error"
+                });
+            }
 
             JwtAuthUtil jwtAuthUtil = new JwtAuthUtil();
             string jwtToken = jwtAuthUtil.GenerateToken(loginVM.Account);
@@ -83,11 +91,11 @@ namespace SurvivalGame.Controllers
                 token = jwtToken
             });
         }
-        
+
         [HttpPost]
         public ActionResult CheckLoginStatus()
         {
-            if(Request.Headers["Authorization"] == null)
+            if (Request.Headers["Authorization"] == null)
             {
                 return Json(new
                 {
@@ -95,7 +103,7 @@ namespace SurvivalGame.Controllers
                 });
             }
             string secret = "bs2020SurvivalGameProjectOneJwtAuth";//加解密的key,如果不一樣會無法成功解密
-                                                                    //解密後會回傳Json格式的物件(即加密前的資料)
+                                                                  //解密後會回傳Json格式的物件(即加密前的資料)
             var jwtObject = Jose.JWT.Decode<Dictionary<string ,Object>>(
             Request.Headers["Authorization"] ,Encoding.UTF8.GetBytes(secret) ,JwsAlgorithm.HS512);
 

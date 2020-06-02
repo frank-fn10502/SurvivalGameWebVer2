@@ -60,14 +60,14 @@
                                 <div class="product-sorting d-flex">
                                     <p>Sort by:</p>
                                     <select name="select" id="sortByselect">
-                                        <option value="value">預設</option>
-                                        <option value="value">人氣</option>
-                                        <option value="value">價格</option>
-                                        <option value="value">新品</option>
+                                        <option value="value">DEFAULT</option>
+                                        <option value="value">NEW</option>
+                                        <option value="value">HOT</option>
+                                        <option value="value">SALE</option>
                                     </select>
                                     <select id="orderDir">
-                                        <option value="value">小到大</option>
-                                        <option value="value">大到小</option>
+                                        <option value="value">ASCEND</option>
+                                        <option value="value">DESCEND</option>
                                     </select>
                                 </div>
                             </div>
@@ -226,6 +226,10 @@
 }
 @section bottomJs
 {
+    <script>
+        var catagory = @(ViewData["catagoryID"] != null ? ViewData["catagoryID"] : null)
+        var sortType = @(ViewData["sortType"] != null ? ViewData["sortType"] : null)
+    </script>
     <script src="~/Assets/javaScript/productMenu/ExteriorHelper.js"></script>
     <script src="~/Assets/javaScript/productMenu/shop.js"></script>
 }

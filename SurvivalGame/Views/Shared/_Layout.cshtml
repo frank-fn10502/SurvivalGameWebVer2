@@ -52,25 +52,19 @@
                             <li>
                                 <a href="#">Products</a>
                                 <ul class="dropdown">
-                                    <li class="specail"><a href="@Url.Action("productMenu" ,"product")">New</a></li>
-                                    <li class="specail"><a href="@Url.Action("productMenu" ,"product")">Hot</a></li>
-                                    <li class="specail"><a href="@Url.Action("productMenu" ,"product")">Sale</a></li>
-                                    <li><a href="@Url.Action("productMenu" ,"product")">Guns</a></li>
-                                    <li><a href="@Url.Action("productMenu" ,"product")">Clothes</a></li>
-                                    <li><a href="@Url.Action("productMenu" ,"product")">Asscessor</a></li>
+                                    <li class="specail"><a href="@Url.Action("productMenu" ,"product")" data-sortType="1">New</a></li>
+                                    <li class="specail"><a href="@Url.Action("productMenu" ,"product")" data-sortType="2">Hot</a></li>
+                                    <li class="specail"><a href="@Url.Action("productMenu" ,"product")" data-sortType="3">Sale</a></li>
+                                    <li><a href="@Url.Action("productMenu" ,"product")" data-caID="CG001">Guns</a></li>
+                                    <li><a href="@Url.Action("productMenu" ,"product")" data-caID="CG002">Clothes</a></li>
+                                    <li><a href="@Url.Action("productMenu" ,"product")" data-caID="CG003">Asscessor</a></li>
+                                    <li><a href="@Url.Action("productMenu" ,"product")" data-caID="CG004">Magazine</a></li>
                                 </ul>
                             </li>
-                            <!-- <li>
-                                <a href="#">News</a>
-                                <ul class="dropdown">
-
-                                </ul>
-                            </li> -->
-
                             <li>
-                                <a href="#">About Us</a>
+                                <a href="@Url.Action("About","home")">About Us</a>
                             </li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="@Url.Action("Contact","home")">Contact</a></li>
                         </ul>
                     </div>
                     <!-- Nav End -->
@@ -100,7 +94,7 @@
                             <img src="~/Assets/images/core-img/user.svg" alt="">
                             <p class="accountName">
                                 <span>this is a test account</span>
-                                <span>(<a href="#">logout</a>)</span>
+                                <span> (<a href="#">logout</a>) </span>
                             </p>
                             
                         </div>
@@ -318,8 +312,8 @@
     <script>
         var checkLoginUrl = "@Url.Action("CheckLoginStatus" ,"Member")";
     </script>
-
     <script src="~/Assets/javaScript/_Layout/_Layout.js"></script>
+
     @RenderSection("scripts" ,required: false)
     @RenderSection("bottomJs" ,required: false)
 
