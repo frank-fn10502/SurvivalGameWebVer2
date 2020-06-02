@@ -228,12 +228,6 @@ namespace SurvivalGame.Models
                 .HasForeignKey(e => e.ProductID)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Products>()
-                .HasMany(e => e.RelatedProducts1)
-                .WithRequired(e => e.Products1)
-                .HasForeignKey(e => e.RelationPID)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<RelatedProducts>()
                 .Property(e => e.ID)
                 .IsFixedLength();

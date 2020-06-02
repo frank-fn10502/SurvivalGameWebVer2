@@ -20,7 +20,5 @@ namespace SurvivalGame.Models
         public string RelationPID { get; set; }
 
         public virtual Products Products { get; set; }
-
-        public virtual Products Products1 { get; set; }
     }
 }

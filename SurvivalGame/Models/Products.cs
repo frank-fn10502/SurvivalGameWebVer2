@@ -17,7 +17,6 @@ namespace SurvivalGame.Models
             Procurement = new HashSet<Procurement>();
             Product_Attributes = new HashSet<Product_Attributes>();
             RelatedProducts = new HashSet<RelatedProducts>();
-            RelatedProducts1 = new HashSet<RelatedProducts>();
         }
 
         [StringLength(10)]
@@ -64,8 +63,5 @@ namespace SurvivalGame.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RelatedProducts> RelatedProducts { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RelatedProducts> RelatedProducts1 { get; set; }
     }
 }
