@@ -6,7 +6,7 @@
 
     <!-- Single Blog Post Thumb -->
     <div class="single-blog-post-thumb">
-        <img src="~/Assets/images/bg-img/ContactUs.jpg" alt="" style="width: 100%; height: auto; position: relative;">
+        <img class="tbg-img" src="~/Assets/images/bg-img/ContactUs.jpg" alt="">
     </div>
 
     <div class="container ">
@@ -14,24 +14,24 @@
             <div class="col-12 col-md-8 ">
                 <div class="regular-page-content-wrapper section-padding-80 ">
                     <div class="regular-page-text ">
-                        <h2 style="font-size: 40px;">Contact Us</h2>
+                        <h2>Contact Us</h2>
                         <blockquote>
-                            <h6><i class="far fa-clock" style="font-size:28px;" aria-hidden="true"></i>營業時間</h6>
-                            <span><i class="fas fa-genderless" style="margin-right: 10px;" aria-hidden="true"></i>週一 ~ 週四 : PM14:00-PM20:00</span><br>
-                            <span><i class="fas fa-genderless" style="margin-right: 10px;" aria-hidden="true"></i>週五 ~ 週六 : PM14:00-PM22:00</span><br>
-                            <span><i class="fas fa-genderless" style="margin-right: 10px;" aria-hidden="true"></i>週日固定公休</span><br>
-                            <span><i class="fas fa-genderless" style="margin-right: 10px;" aria-hidden="true"></i>國定假日另行公告</span><br>
+                            <h6><i class="far fa-clock" aria-hidden="true"></i>營業時間</h6>
+                            <span><i class="fas fa-genderless" aria-hidden="true"></i>週一 ~ 週四 : PM14:00-PM20:00</span><br>
+                            <span><i class="fas fa-genderless" aria-hidden="true"></i>週五 ~ 週六 : PM14:00-PM22:00</span><br>
+                            <span><i class="fas fa-genderless" aria-hidden="true"></i>週日固定公休</span><br>
+                            <span><i class="fas fa-genderless" aria-hidden="true"></i>國定假日另行公告</span><br>
                         </blockquote>
                         <blockquote>
-                            <h6><i class="far fa-address-book" style="font-size:30px;" aria-hidden="true "></i> 聯絡資訊</h6>
-                            <span><i class="fas fa-genderless" style="margin-right: 10px;" aria-hidden="true"></i>客服專線：03-666-6666</span><br>
-                            <span><i class="fas fa-genderless" style="margin-right: 10px;" aria-hidden="true"></i>公司傳真：03-888-8888</span><br>
-                            <span><i class="fas fa-genderless" style="margin-right: 10px;" aria-hidden="true"></i>門市地址：新竹市香山區五福路二段707號</span><br>
-                            <span><i class="fas fa-genderless" style="margin-right: 10px;" aria-hidden="true"></i>電子信箱：SurvivalGame@gmail.com</span>
+                            <h6><i class="far fa-address-book" aria-hidden="true"></i> 聯絡資訊</h6>
+                            <span><i class="fas fa-genderless" aria-hidden="true"></i>客服專線：03-666-6666</span><br>
+                            <span><i class="fas fa-genderless" aria-hidden="true"></i>公司傳真：03-888-8888</span><br>
+                            <span><i class="fas fa-genderless" aria-hidden="true"></i>門市地址：新竹市香山區五福路二段707號</span><br>
+                            <span><i class="fas fa-genderless" aria-hidden="true"></i>電子信箱：SurvivalGame@gmail.com</span>
                         </blockquote>
-                        <div style="padding: 20px 0;">
-                            <h3 style="margin: 15px 0;">注意事項</h3>
-                            <h5><i class="fas fa-exclamation-triangle" style="margin-right: 10px; color:red;" aria-hidden="true"></i>槍枝商品不得販售予未滿 18 歲之未成年者。</h5>
+                        <div>
+                            <h3>注意事項</h3>
+                            <h5><i class="fas fa-exclamation-triangle" aria-hidden="true"></i>槍枝商品不得販售予未滿 18 歲之未成年者。</h5>
                             <h5>本頁面所列之內容及價格，僅適用於台灣地區。</h5>
                         </div>
                     </div>
@@ -41,3 +41,44 @@
     </div>
 </div>
 <!-- ##### Contact Wrapper Area End ##### -->
+@section topCss
+{
+    <script src="https://kit.fontawesome.com/437be08d6c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <style>
+        .single-blog-wrapper{
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .tbg-img{
+            width: 100%;
+            height: auto;
+        }
+
+        .regular-page-text h2{
+            font-size: 40px;
+        }
+        .regular-page-text h6, .regular-page-text div h5{
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .regular-page-text h6 i{
+            font-size: 28px;
+        }
+
+        .regular-page-text span i{
+            margin-right: 10px;
+        }
+
+        .regular-page-text div{
+            padding: 20px 0;
+        }
+        .regular-page-text div h3{
+            margin: 15px 0;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .regular-page-text h5 i{
+            margin-right: 10px;
+            color: red;
+        }
+    </style>
+}

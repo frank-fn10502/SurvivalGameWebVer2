@@ -265,6 +265,7 @@
     <Compile Include="Models\Product_Attributes.cs" />
     <Compile Include="Models\RelatedProducts.cs" />
     <Compile Include="Models\SGModel.cs" />
+    <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IndexRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
@@ -299,6 +300,7 @@
     <Content Include="Assets\css\classy-nav.min.css" />
     <Content Include="Assets\css\core-style.css" />
     <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\css\Index\Index.css" />
     <Content Include="Assets\css\jquery-ui.min.css" />
     <Content Include="Assets\css\magnific-popup.css" />
     <Content Include="Assets\css\MemberCentre\member.css" />
@@ -371,6 +373,9 @@
     <Content Include="Assets\images\Apparel\PD049\02.jpg" />
     <Content Include="Assets\images\Apparel\PD050\01.jpg" />
     <Content Include="Assets\images\background.jpg" />
+    <Content Include="Assets\images\bg-img\200531_0005.jpg" />
+    <Content Include="Assets\images\bg-img\200531_0011.jpg" />
+    <Content Include="Assets\images\bg-img\200531_01.png" />
     <Content Include="Assets\images\bg-img\AboutUs.jpg" />
     <Content Include="Assets\images\bg-img\bg-1.jpg" />
     <Content Include="Assets\images\bg-img\bg-2.jpg" />
@@ -380,6 +385,7 @@
     <Content Include="Assets\images\bg-img\bg-6.jpg" />
     <Content Include="Assets\images\bg-img\bg-7.jpg" />
     <Content Include="Assets\images\bg-img\bg-8.jpg" />
+    <Content Include="Assets\images\bg-img\BG02.png" />
     <Content Include="Assets\images\bg-img\bg1.jpg" />
     <Content Include="Assets\images\bg-img\bg2.jpg" />
     <Content Include="Assets\images\bg-img\blog1.jpg" />
