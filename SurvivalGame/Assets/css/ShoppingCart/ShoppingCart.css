@@ -6,6 +6,11 @@
     margin: 0;
 }
 
+.form-check-input {
+    position: relative;
+    margin: 0 1rem;
+}
+
 #collapseTwo .card-body,
 #collapseThree .card-body {
     padding: 0;
@@ -22,7 +27,7 @@
 }
 
 .FromLayout {
-    border: 1px #1B6AE3 solid;
+    border: 5px #1B6AE3 solid;
 }
 
 .btn-link,
@@ -38,7 +43,6 @@
 
 .Detail div {
     font-size: large;
-    border: 1px solid #eee;
 }
 
 .Detail .row:nth-child(even) {
@@ -100,6 +104,106 @@
     display: inline-flex;
 }
 
+
+.StepArea {
+    display: flex;
+    justify-content: center;
+}
+
+    .StepArea div {
+        position: relative;
+        text-align: center;
+        line-height: 3rem;
+        background-color: #d6d8d9;
+        font-size: 16px;
+        color: #fff;
+    }
+
+.essence-btn:focus,
+.essence-btn,
+.essence-btn:hover {
+    background-color: #003263;
+}
+
+
+.StepArea .active {
+    background-color: #1B6AE3;
+    font-size: 20px;
+}
+
+.StepArea div::after {
+    position: absolute;
+    content: '';
+    border-top: 1.5rem solid #ffffff;
+    border-left: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid #ffffff;
+    right: 0;
+}
+
+.StepArea div::before {
+    position: absolute;
+    content: '';
+    border-top: 1.5rem solid transparent;
+    border-left: 1.5rem solid #FFF;
+    border-bottom: 1.5rem solid transparent;
+    left: 0;
+}
+
+.css_button {
+    padding: 13px 25px;
+    border: 1px solid #C7C7C7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#9C9C9C));
+    background-color: #9C9C9C;
+    box-shadow: inset 0px -3px 2px 2px #615f5f, inset 0px 0px 5px #000000;
+    border-radius: 7px;
+    text-shadow: #FFFFFF -1px 1.5px 0px;
+    color: #737373;
+    font-size: 16px;
+    font-family: '·L³n¥¿¶ÂÅé';
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+    .css_button:hover {
+        padding: 13px 25px;
+        font-size: 16px;
+        background: none;
+        background-color: #d2d2d2;
+        box-shadow: inset 0px 2px 4px 4px #848484;
+        border: 1px solid #ffffff;
+        color: #000000;
+    }
+
+    .css_button:active {
+        top: 1px;
+        position: relative;
+    }
+
+
+.cart-amount-summary:before {
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    z-index: 2;
+    /* background-image: url('/img/bg-img/640x525a0a0.png'); */
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.input-group-prepend {
+    margin: 0;
+}
+
+.input-group,
+.input-group-text,
+.input-group-prepend {
+    display: block;
+    border-radius: 0;
+}
+
 @media screen and (max-width: 992px) {
     .CartHeader {
         display: none;
@@ -120,60 +224,28 @@
         .CartContext .nice-select {
             line-height: 40px;
         }
-
-    @media screen and (max-width: 568px) {
-        .CartPicWarp {
-            margin: auto;
-            padding: 0;
-        }
-
-        .CartContext {
-            padding: 0;
-        }
-
-            .CartContext DIV {
-                padding-right: 0;
-            }
-
-        .StepArea {
-            flex-wrap: wrap;
-        }
-    }
 }
 
-.StepArea {
-    display: flex;
-    justify-content: center;
-}
-
-    .StepArea div {
-        position: relative;
-        text-align: center;
-        line-height: 3rem;
-        background-color: #d6d8d9;
-        font-size: 16px;
-        color: #fff;
+@media screen and (max-width: 568px) {
+    .CartPicWarp {
+        margin: auto;
+        padding: 0;
     }
+
+    .CartContext {
+        padding: 0;
+    }
+
+        .CartContext DIV {
+            padding-right: 0;
+        }
 
     .StepArea .active {
         background-color: #1B6AE3;
-        font-size: 20px;
+        font-size: 15px;
     }
 
-    .StepArea div::after {
-        position: absolute;
-        content: '';
-        border-top: 1.5rem solid #ffffff;
-        border-left: 1.5rem solid transparent;
-        border-bottom: 1.5rem solid #ffffff;
-        right: 0;
+    .StepArea {
+        flex-wrap: wrap;
     }
-
-    .StepArea div::before {
-        position: absolute;
-        content: '';
-        border-top: 1.5rem solid transparent;
-        border-left: 1.5rem solid #FFF;
-        border-bottom: 1.5rem solid transparent;
-        left: 0;
-    }
+}

@@ -8,14 +8,23 @@
     position: relative;
     z-index: 1;
 }
-
+    .single_product_details_area .single_product_desc .product-price span {
+    text-decoration:unset;
+    }
+    .single_product_details_area {
+        background: #eee;
+        margin: 0 15%;
+    }
 @media only screen and (max-width: 767px) {
-    .single_product_details_area .single_product_thumb,
-    .single_product_details_area .single_product_desc {
+    .single_product_details_area .single_product_thumb, .single_product_details_area .single_product_desc {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
         width: 100%;
     }
+}
+.essence-btn:focus,
+.essence-btn, .essence-btn:hover {
+    background-color: #003263;
 }

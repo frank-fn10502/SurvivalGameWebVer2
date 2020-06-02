@@ -9,9 +9,9 @@ namespace SurvivalGame.ViewModels.MemberRegistered
 {
     public class MemberRegisteredViewModel
     {
-        //[Required]
-        //[RegularExpression(@"^[\a-\z\A-\Z\u2E80-\u9FFF]*$")]
-        //[StringLength(25, MinimumLength = 2, ErrorMessage = "姓名長度介於2-25個字元")]
+        [Required]
+        [RegularExpression(@"^[a-zA-Z\u2E80-\u9FFF]*$")]
+        [StringLength(25, MinimumLength = 2, ErrorMessage = "姓名長度介於2-25個字元")]
         public string Name { get; set; }
 
         [Required]
@@ -37,14 +37,15 @@ namespace SurvivalGame.ViewModels.MemberRegistered
         [Required]
         [RegularExpression(@"^\d{3,6}$")]
         [StringLength(6, MinimumLength = 2, ErrorMessage = "請輸入3至6位數字")]
-        public int PostCode { get; set; }
+        public string PostCode { get; set; }
 
         [Required]
-        [RegularExpression(@"^[\a-\z\A-\Z\u2E80-\u9FFF]*$")]
+        [RegularExpression(@"^[a-zA-Z\u2E80-\u9FFF]*$")]
         [StringLength(50, MinimumLength = 10, ErrorMessage = "請輸入完整地址")]
         public string Address { get; set; }
 
         [Required]
+        [StringLength(10)]
         [RegularExpression(@"^09\d{8}$", ErrorMessage = "請輸入09開頭的10位數字手機號碼")]
         public string Phone { get; set; }
 
@@ -52,7 +53,5 @@ namespace SurvivalGame.ViewModels.MemberRegistered
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
     }
-
-    
 
 }
