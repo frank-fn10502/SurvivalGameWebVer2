@@ -25,7 +25,9 @@ namespace SurvivalGame.Controllers
 
         public ActionResult ProductDetails()
         {
-            return View();
+            ProductDetailsServices dService = new ProductDetailsServices();
+            var d = dService.GetProductDetailById("PD002");
+            return View(d);
         }
 
         public ActionResult GetCatagoryItems(string CaId ,string clId)

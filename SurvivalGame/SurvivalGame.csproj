@@ -272,6 +272,7 @@
     <Compile Include="Repository\SGRepository.cs" />
     <Compile Include="Security\JwtAuthUtil.cs" />
     <Compile Include="Services\IndexServices.cs" />
+    <Compile Include="Services\ProductDetailsServices.cs" />
     <Compile Include="Services\ProductMenuService.cs" />
     <Compile Include="ViewModels\MemberLogin\MemberLoginViewModel.cs" />
     <Compile Include="ViewModels\MemberRegistered\MemberRegisteredViewModel.cs" />
@@ -279,6 +280,8 @@
     <Compile Include="ViewModels\Index\PopularViewModel.cs" />
     <Compile Include="ViewModels\Index\SortViewModel.cs" />
     <Compile Include="ViewModels\Index\ProductsViewModel.cs" />
+    <Compile Include="ViewModels\ProductDetails\DescribeViewModels.cs" />
+    <Compile Include="ViewModels\ProductDetails\ProductDetailsViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\AttributesViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\CatagoryViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\Color.cs" />
@@ -290,6 +293,7 @@
     <Compile Include="ViewModels\ProductMenu\RangeViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\SubCatagoryViewModel.cs" />
     <Compile Include="ViewModels\ProductMenu\SubClassViewMode.cs" />
+    <Compile Include="ViewModels\Index\ProductsViewModel.cs" />
     <Compile Include="ViewModels\ShoppingCart\GetCartItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -297,6 +301,7 @@
     <Content Include="Assets\css\classy-nav.min.css" />
     <Content Include="Assets\css\core-style.css" />
     <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\css\Index\Index.css" />
     <Content Include="Assets\css\jquery-ui.min.css" />
     <Content Include="Assets\css\magnific-popup.css" />
     <Content Include="Assets\css\MemberCentre\member.css" />
@@ -369,6 +374,9 @@
     <Content Include="Assets\images\Apparel\PD049\02.jpg" />
     <Content Include="Assets\images\Apparel\PD050\01.jpg" />
     <Content Include="Assets\images\background.jpg" />
+    <Content Include="Assets\images\bg-img\200531_0005.jpg" />
+    <Content Include="Assets\images\bg-img\200531_0011.jpg" />
+    <Content Include="Assets\images\bg-img\200531_01.png" />
     <Content Include="Assets\images\bg-img\AboutUs.jpg" />
     <Content Include="Assets\images\bg-img\bg-1.jpg" />
     <Content Include="Assets\images\bg-img\bg-2.jpg" />
@@ -378,6 +386,7 @@
     <Content Include="Assets\images\bg-img\bg-6.jpg" />
     <Content Include="Assets\images\bg-img\bg-7.jpg" />
     <Content Include="Assets\images\bg-img\bg-8.jpg" />
+    <Content Include="Assets\images\bg-img\BG02.png" />
     <Content Include="Assets\images\bg-img\bg1.jpg" />
     <Content Include="Assets\images\bg-img\bg2.jpg" />
     <Content Include="Assets\images\bg-img\blog1.jpg" />
