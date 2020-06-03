@@ -29,10 +29,10 @@ namespace SurvivalGame.Controllers
             return View();
         }
 
-        public ActionResult ProductDetails()
+        public ActionResult ProductDetails(string PID)
         {
             ProductDetailsServices dService = new ProductDetailsServices();
-            var d = dService.GetProductDetailById("PD002");
+            var d = dService.GetProductDetailById(PID);//"PD002"
             return View(d);
         }
 

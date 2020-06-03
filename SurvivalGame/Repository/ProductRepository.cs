@@ -20,11 +20,12 @@ namespace SurvivalGame.Repository
             var imgs = new SGRepository<Imgs>(context).GetAll();
             var result = from p in products
                          join img in imgs on p.ID equals img.ProductID
-                         select new ProductViewModel { Name = p.Name ,ImgPath = img.Img ,Price = p.Price ,OnsalePrice = p.Price * 0.8m };
+                         select new ProductViewModel { ID = p.ID , Name = p.Name ,ImgPath = img.Img ,Price = p.Price ,OnsalePrice = p.Price * 0.8m };
 
             return result.GroupBy(x => x.Name).Select(x =>
                     new ProductViewModel
                     {
+                        ID = x.FirstOrDefault().ID,
                         Name = x.Key ,
                         ImgPath = x.FirstOrDefault().ImgPath ,
                         Price = x.FirstOrDefault().Price ,
@@ -148,6 +149,7 @@ namespace SurvivalGame.Repository
 
             var answer = result.Select(x => new ProductViewModel
             {
+                ID = x.p.ID,
                 Name = x.p.Name ,
                 ImgPath = x.img.Img ,
                 Price = x.p.Price ,
@@ -157,6 +159,7 @@ namespace SurvivalGame.Repository
             return answer.GroupBy(x => x.Name).Select(x =>
                     new ProductViewModel
                     {
+                        ID = x.FirstOrDefault().ID ,
                         Name = x.Key ,
                         ImgPath = x.FirstOrDefault().ImgPath ,
                         Price = x.FirstOrDefault().Price ,
@@ -205,7 +208,8 @@ namespace SurvivalGame.Repository
             productDetailsViewModel.color = result.color;
             productDetailsViewModel.Describe = result.Describe;
             productDetailsViewModel.Imgs = resultB;
-            productDetailsViewModel.Describe = string.Join("\n", resultC.Select(x => x.Describe)) + "\n" + string.Join("\n", DesConvert.Attr) + "\n" + DesConvert.Depiction;
+            productDetailsViewModel.Describe = string.Join("\n", resultC.Select(x => x.Describe)) + "\n" +
+                                   (DesConvert != null ? (DesConvert.Attr != null ? string.Join("\n", DesConvert.Attr) : "") + "\n" + DesConvert.Depiction : "");
             return productDetailsViewModel;
         }
     }

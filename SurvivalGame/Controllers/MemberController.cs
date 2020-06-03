@@ -29,7 +29,7 @@ namespace SurvivalGame.Controllers
             return View();
         }
 
-        [JwtAuthActionFilter]
+        //[JwtAuthActionFilter]
         public ActionResult MemberCentre()
         {
             return View();

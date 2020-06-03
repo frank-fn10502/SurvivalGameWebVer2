@@ -190,7 +190,7 @@ function setEvent() {
     let pCards = this.document.querySelectorAll('.shop_grid_product_area .single-product-wrapper');
     pCards.forEach(x => {
         x.addEventListener('click', (e) => {
-            window.location.href = "./productDetails";
+            window.location.href = `./productDetails?PID=${e.currentTarget.getAttribute('data-PID')}`;
         });
     });
 
